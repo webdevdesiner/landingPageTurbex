@@ -39,23 +39,42 @@ body{
 }
 
 .headPunch {
+    /* Define a cor do texto como um tom de cinza escuro */
     color: rgb(108, 108, 108);
+
+    /* Adiciona um espaçamento superior de 10px */
     padding-top: 10px;
+
+    /* Faz o elemento ocupar toda a largura disponível */
     width: 100%;
+
+    /* Altura automática para se ajustar ao conteúdo */
     height: auto;
-    /* background-color: yellow; */
+
+    /* Impede que o texto quebre para a próxima linha */
     white-space: nowrap;
+
+    /* Esconde qualquer conteúdo que ultrapasse a largura do elemento */
     overflow: hidden;
+
+    /* Adiciona reticências (...) ao final do texto que ultrapassar o limite do elemento */
     text-overflow: ellipsis;
-    font-size: clamp(12px, 5vw, 34px);
+
+    /* Define o tamanho da fonte de forma responsiva, entre 12px e 34px, variando conforme a largura da tela */
+    font-size: clamp(12px, 3.5vw, 34px);
+
+    /* Centraliza o texto horizontalmente */
     text-align: center;
-    /* Adiciona uma borda branca nas letras */
+
+    /* Adiciona uma borda branca ao redor das letras para dar destaque */
     text-shadow:
-        -0.1px -0.1px 0 #fff,
-         0.1px -0.1px 0 #fff,
-        -0.1px  0.1px 0 #fff,
+        /* -0.1px -0.1px 0 #fff, */
+         /* 0.1px -0.1px 0 #fff, */
+        /* -1px  1px 0 #fff, */
          0.1px  0.1px 0 #fff;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    /* Define uma fonte sem serifa, com peso negrito/grosso */
+    font-family: 'Arial Black', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .bgImage {
