@@ -132,7 +132,7 @@ body{
     position: relative;
     z-index: 1; /* Garante que fique acima do fundo, mas abaixo de overlays */
     max-width: 90%;              /* Define a largura máxima do container para 90% */
-    margin: 60vh auto 0 auto;    /* Centraliza horizontalmente e posiciona a partir de 60% da altura da viewport */
+    margin: 60vh auto 20% auto;    /* Centraliza horizontalmente e posiciona a partir de 60% da altura da viewport */
     padding: 32px 28px;          /* Espaçamento interno de 32px em cima/baixo e 28px nas laterais */
     background: #fff;            /* Fundo branco */
     border-radius: 18px;         /* Bordas arredondadas com raio de 18px */
