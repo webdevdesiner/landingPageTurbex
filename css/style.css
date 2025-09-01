@@ -98,6 +98,7 @@ body{
     align-items: end;
     gap: 24px;
     margin: 32px 0;
+    margin-right: 15px;
 }
 
 .menu-eclipse button {
