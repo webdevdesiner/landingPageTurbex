@@ -128,38 +128,43 @@ body{
     transform: scale(1.3) translateX(-25px);
 }
 
-.areaSobre {
+.nossaHistoria {
     position: relative;
     z-index: 1; /* Garante que fique acima do fundo, mas abaixo de overlays */
     max-width: 90%;              /* Define a largura máxima do container para 90% */
-    margin: 60vh auto 0 auto;      /* Centraliza horizontalmente e posiciona a partir de 60% da altura da viewport */
-    padding: 32px 28px;            /* Espaçamento interno de 32px em cima/baixo e 28px nas laterais */
-    background: #fff;              /* Fundo branco */
-    border-radius: 18px;           /* Bordas arredondadas com raio de 18px */
-    /* Sombra projetada mais destacada */
-    box-shadow: 
-        0 8px 32px 0 rgba(0,0,0,0.18), /* sombra projetada mais forte */
-        0 4px 24px rgba(0,0,0,0.10);   /* sombra suave original */
-    border: 1px solid #e0e0e0;     /* Borda fina e cinza clara */
-    font-size: 1.15rem;            /* Tamanho da fonte levemente maior que o padrão */
-    color: #222;                   /* Cor do texto em cinza escuro */
-    line-height: 1.7;              /* Altura da linha para melhor legibilidade */
-    display: flex;                 /* Usa flexbox para o layout interno */
-    /* Brilho na borda superior */
+    margin: 60vh auto 0 auto;    /* Centraliza horizontalmente e posiciona a partir de 60% da altura da viewport */
+    padding: 32px 28px;          /* Espaçamento interno de 32px em cima/baixo e 28px nas laterais */
+    background: #fff;            /* Fundo branco */
+    border-radius: 18px;         /* Bordas arredondadas com raio de 18px */
     box-shadow: 
         0 8px 32px 0 rgba(0,0,0,0.18), /* sombra projetada */
         0 4px 24px rgba(0,0,0,0.10),   /* sombra suave */
         0 -4px 18px 2px rgba(255,255,255,0.65); /* brilho branco desfocado na borda superior */
+    border: 1px solid #e0e0e0;   /* Borda fina e cinza clara */
+    font-size: 1.15rem;          /* Tamanho da fonte levemente maior que o padrão */
+    color: #222;                 /* Cor do texto em cinza escuro */
+    line-height: 1.7;            /* Altura da linha para melhor legibilidade */
+    /* margin-bottom: 32px;         Espaço entre os blocos */
+    display: block;              /* Garante que cada box fique separada */
 }
 
-.areaSobre > div {
-    background: #f7f7f7;
-    border-radius: 10px;
-    padding: 18px 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    border: 1px solid #ececec;
+.nossoCompromisso {
+    position: relative;
+    z-index: 1; /* Garante que fique acima do fundo, mas abaixo de overlays */
+    max-width: 90%;              /* Define a largura máxima do container para 90% */
+    margin: 10vh auto 0 auto;    /* Centraliza horizontalmente e posiciona a partir de 60% da altura da viewport */
+    padding: 32px 28px;          /* Espaçamento interno de 32px em cima/baixo e 28px nas laterais */
+    background: #fff;            /* Fundo branco */
+    border-radius: 18px;         /* Bordas arredondadas com raio de 18px */
+    box-shadow: 
+        0 8px 32px 0 rgba(0,0,0,0.18), /* sombra projetada */
+        0 4px 24px rgba(0,0,0,0.10),   /* sombra suave */
+        0 -4px 18px 2px rgba(255,255,255,0.65); /* brilho branco desfocado na borda superior */
+    border: 1px solid #e0e0e0;   /* Borda fina e cinza clara */
+    font-size: 1.15rem;          /* Tamanho da fonte levemente maior que o padrão */
+    color: #222;                 /* Cor do texto em cinza escuro */
+    line-height: 1.7;            /* Altura da linha para melhor legibilidade */
+    /* margin-bottom: 32px;         Espaço entre os blocos */
+    display: block;              /* Garante que cada box fique separada */
 }
 
-.bgImage {
-    z-index: -5; /* Mantém a imagem de fundo atrás de tudo */
-}
