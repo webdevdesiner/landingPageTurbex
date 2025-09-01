@@ -137,9 +137,9 @@ body{
     background: #fff;            /* Fundo branco */
     border-radius: 18px;         /* Bordas arredondadas com raio de 18px */
     box-shadow: 
-        0 8px 32px 0 rgba(0,0,0,0.18), /* sombra projetada */
+        0 8px 32px 0 rgba(0,0,0,5.18), /* sombra projetada */
         0 4px 24px rgba(0,0,0,0.10),   /* sombra suave */
-        0 -4px 18px 2px rgba(255,255,255,0.65); /* brilho branco desfocado na borda superior */
+        0 -4px 18px 2px rgba(255,255,255,2.65); /* brilho branco desfocado na borda superior */
     border: 1px solid #e0e0e0;   /* Borda fina e cinza clara */
     font-size: 1.15rem;          /* Tamanho da fonte levemente maior que o padrão */
     color: #222;                 /* Cor do texto em cinza escuro */
@@ -157,9 +157,9 @@ body{
     background: #fff;            /* Fundo branco */
     border-radius: 18px;         /* Bordas arredondadas com raio de 18px */
     box-shadow: 
-        0 8px 32px 0 rgba(0,0,0,0.18), /* sombra projetada */
+        0 8px 32px 0 rgba(0,0,0,5.18), /* sombra projetada */
         0 4px 24px rgba(0,0,0,0.10),   /* sombra suave */
-        0 -4px 18px 2px rgba(255,255,255,0.65); /* brilho branco desfocado na borda superior */
+        0 -4px 18px 2px rgba(255,255,255,2.65); /* brilho branco desfocado na borda superior */
     border: 1px solid #e0e0e0;   /* Borda fina e cinza clara */
     font-size: 1.15rem;          /* Tamanho da fonte levemente maior que o padrão */
     color: #222;                 /* Cor do texto em cinza escuro */
