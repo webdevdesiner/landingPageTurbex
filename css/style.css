@@ -290,6 +290,7 @@ body{
 
 /* aqui encerra o carrossel de produtos */
 
+/* aqui esta a imagem desfilada em tiras - nigth training */
 .imgNigth
 {
     display: flex;
@@ -301,4 +302,66 @@ body{
     height: auto;
     /* Adiciona uma sombra em cada traço da imagem */
     filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.95)) drop-shadow(-2px -2px 4px rgba(0,0,0,0.15));
+    padding-bottom: 20px;
+}
+
+
+/* aqui sera o destaque com imagem-Raio */
+
+.destaqueRaio
+{
+    margin-top: 0;
+    width: 100vw;
+    height: 150vh;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.textoDestaqueRaio
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    gap: 10px;
+    
+
+    /* background-color: pink; */
+}
+
+/* O problema de alinhamento e largura reduzida está relacionado ao uso de width: 100vw e max-width: 80vw em .imgRaio, e width: 100vh em .tabelaNutricional. 
+   O uso de vw (viewport width) e vh (viewport height) pode causar barras de rolagem horizontais e limitar a largura do conteúdo, especialmente em telas menores ou quando há margens/paddings no body/html.
+   Recomenda-se usar porcentagens relativas ao container pai ou valores máximos em px/rem para melhor responsividade e alinhamento. */
+
+.imgRaio
+{
+    background-image: url(../image/Nigth/raioNigth.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 800px;
+    height: 60vh;
+    max-height: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+.tabelaNutricional
+{
+    background-image: url(../image/Nigth/tabelaNigth.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 600px;
+    height: 60vh;
+    max-height: 400px;
+    margin: 32px auto 0 auto;
+    display: block;
 }
