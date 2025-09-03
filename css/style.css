@@ -87,7 +87,7 @@ body{
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url(../image/bannerBotton.png);
+    background-image: url(../image/BannerTop/mobileAcademia.png);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
@@ -340,7 +340,7 @@ body{
 
 .imgRaio
 {
-    background-image: url(../image/Nigth/raioNigth.png);
+    background-image: url(../image/Nigth/Ativo\ 7raioFrutas.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
