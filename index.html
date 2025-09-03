@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    
     <title>Turbex Suplements</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
 </head>
 <body>
     <div class="areHeader">
         <div class="logo">
-            <img src="./image/logoTurbexPreto.png" alt="logo">
+            <img id="pulsoInfinitolento" src="./image/logoTurbexPreto.png" alt="logo">
         </div>
 
        <div class="headPunch">
-        <h2>A SUA ENERGIA COMEÇA AQUI</h2> 
+        <h2 id="pulsoInfinito">A SUA ENERGIA COMEÇA AQUI</h2> 
        </div>
        <div class="bgContent">
         <div class="menu-eclipse">
@@ -23,7 +27,57 @@
         <button>Depimentos</button>
         <button>Contato</button>
         </div>
-        <div class="bgImage"></div>
+        <div class="bgImage">
+            <div class="produtos-slider">
+                <img id="produto-rotativo" src="./image/produtos/produto1.png" alt="Produto Turbex" >
+            </div>
+        </div>
+        <script>
+            // Lista de imagens dos produtos (ajuste os caminhos conforme necessário)
+            const imagensProdutos = [
+                './image/BannerTop/produto-BannerTop/B-Cafeina.png',
+                './image/BannerTop/produto-BannerTop/B-Frutas Negras.png',
+                './image/BannerTop/produto-BannerTop/B-NigthTraining.png',
+                './image/BannerTop/produto-BannerTop/B-Cafeina.png',
+                './image/BannerTop/produto-BannerTop/B-Frutas Negras.png',
+                './image/BannerTop/produto-BannerTop/B-NigthTraining.png',
+                './image/BannerTop/produto-BannerTop/B-Cafeina.png',
+                './image/BannerTop/produto-BannerTop/B-Frutas Negras.png',
+                './image/BannerTop/produto-BannerTop/B-NigthTraining.png',
+                './image/BannerTop/produto-BannerTop/B-Cafeina.png',
+                './image/BannerTop/produto-BannerTop/B-Frutas Negras.png'
+            ];
+
+            let indiceAtual = 0;
+            const imgRotativa = document.getElementById('produto-rotativo');
+            const tempoFade = 2000; // ms
+            const tempoExibicao = 1800; // ms (tempo que a imagem fica visível antes de começar o fade out)
+
+            function trocarImagemSincronizado() {
+                // Inicia fade out
+                imgRotativa.style.transition = `opacity ${tempoFade}ms`;
+                imgRotativa.style.opacity = 0;
+
+                // Após o fade out, troca a imagem e faz fade in
+                setTimeout(() => {
+                    indiceAtual = (indiceAtual + 1) % imagensProdutos.length;
+                    imgRotativa.src = imagensProdutos[indiceAtual];
+
+                    // Garante que o fade in será suave
+                    imgRotativa.style.transition = `opacity ${tempoFade}ms`;
+                    imgRotativa.style.opacity = 1;
+                }, tempoFade);
+
+                // Agenda a próxima troca após o ciclo completo (fade out + fade in + exibição)
+                setTimeout(trocarImagemSincronizado, tempoFade * 2 + tempoExibicao);
+            }
+
+            // Garante que a imagem começa visível
+            imgRotativa.style.opacity = 1;
+
+            // Inicia o ciclo após o tempo de exibição inicial
+            setTimeout(trocarImagemSincronizado, tempoExibicao);
+        </script>
        </div>
     </div>   
  
@@ -154,5 +208,6 @@
 
 
 <script src="./script/script.js"></script>
+<script src="./script/animacoes.js"></script>
 </body>
 </html>

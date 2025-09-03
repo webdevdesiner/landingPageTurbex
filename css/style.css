@@ -95,6 +95,36 @@ body{
     pointer-events: none; /* Garante que não bloqueie cliques */
 }
 
+.produtos-slider
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    /* background-color: pink; */
+}
+
+#produto-rotativo { /* Seleciona o elemento de imagem rotativa do produto */
+    max-width: 100vw; /* Limita a largura máxima à largura da viewport */
+    max-height: 60vh; /* Limita a altura máxima a 60% da altura da viewport */
+    object-fit: contain; /* Garante que a imagem seja totalmente visível sem distorção */
+    transition: opacity 0.7s; /* Suaviza a transição de opacidade ao trocar a imagem */
+    position: absolute; /* Permite posicionar o elemento em relação ao seu container pai */
+    left: 50%; /* Centraliza horizontalmente */
+    bottom: 0; /* Alinha pela parte de baixo do container pai */
+    top: auto; /* Remove o alinhamento pelo topo */
+    transform: translateX(-50%); /* Centraliza horizontalmente sem mexer no eixo Y */
+    pointer-events: auto; /* Permite interação do mouse/touch com o elemento */
+    display: block; /* Garante que o elemento se comporte como bloco (útil para <img>) */
+    /* Não use background-image aqui, pois a imagem é definida pelo atributo src do <img> */
+    /* background-color: pink; */
+}
+
 .menu-eclipse {
     display: flex;
     flex-direction: column;
@@ -340,7 +370,7 @@ body{
 
 .imgRaio
 {
-    background-image: url(../image/Nigth/Ativo\ 7raioFrutas.png);
+    background-image: url(../image/Nigth/raioFrutas.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
