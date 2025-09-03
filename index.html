@@ -33,51 +33,47 @@
             </div>
         </div>
         <script>
-            // Lista de imagens dos produtos (ajuste os caminhos conforme necessário)
+            // Lista de imagens
             const imagensProdutos = [
-                './image/BannerTop/produto-BannerTop/B-Cafeina.png',
-                './image/BannerTop/produto-BannerTop/B-Frutas Negras.png',
-                './image/BannerTop/produto-BannerTop/B-NigthTraining.png',
-                './image/BannerTop/produto-BannerTop/B-Cafeina.png',
-                './image/BannerTop/produto-BannerTop/B-Frutas Negras.png',
-                './image/BannerTop/produto-BannerTop/B-NigthTraining.png',
-                './image/BannerTop/produto-BannerTop/B-Cafeina.png',
-                './image/BannerTop/produto-BannerTop/B-Frutas Negras.png',
-                './image/BannerTop/produto-BannerTop/B-NigthTraining.png',
-                './image/BannerTop/produto-BannerTop/B-Cafeina.png',
-                './image/BannerTop/produto-BannerTop/B-Frutas Negras.png'
+              './image/BannerTop/produto-BannerTop/B-Cafeina.png',
+              './image/BannerTop/produto-BannerTop/B-Frutas Negras.png',
+              './image/BannerTop/produto-BannerTop/B-NigthTraining.png',
+              './image/BannerTop/produto-BannerTop/B-Cafeina.png',
+              './image/BannerTop/produto-BannerTop/B-Frutas Negras.png',
+              './image/BannerTop/produto-BannerTop/B-NigthTraining.png'
             ];
-
+          
             let indiceAtual = 0;
             const imgRotativa = document.getElementById('produto-rotativo');
-            const tempoFade = 2000; // ms
-            const tempoExibicao = 1800; // ms (tempo que a imagem fica visível antes de começar o fade out)
-
-            function trocarImagemSincronizado() {
-                // Inicia fade out
-                imgRotativa.style.transition = `opacity ${tempoFade}ms`;
-                imgRotativa.style.opacity = 0;
-
-                // Após o fade out, troca a imagem e faz fade in
-                setTimeout(() => {
-                    indiceAtual = (indiceAtual + 1) % imagensProdutos.length;
-                    imgRotativa.src = imagensProdutos[indiceAtual];
-
-                    // Garante que o fade in será suave
-                    imgRotativa.style.transition = `opacity ${tempoFade}ms`;
-                    imgRotativa.style.opacity = 1;
-                }, tempoFade);
-
-                // Agenda a próxima troca após o ciclo completo (fade out + fade in + exibição)
-                setTimeout(trocarImagemSincronizado, tempoFade * 2 + tempoExibicao);
+          
+            const tempoFadeOut = 500;   // 0.5s para apagar (rápido)
+            const tempoFadeIn = 1500;   // 1.5s para aparecer (mais lento)
+            const tempoExibicao = 2500; // 2.5s visível antes de apagar de novo
+          
+            function trocarImagem() {
+              // Fade OUT primeiro (rápido)
+              imgRotativa.style.transition = `opacity ${tempoFadeOut}ms ease-in-out`;
+              imgRotativa.style.opacity = 0;
+          
+              // Espera o fade OUT terminar para trocar a imagem
+              setTimeout(() => {
+                indiceAtual = (indiceAtual + 1) % imagensProdutos.length;
+                imgRotativa.src = imagensProdutos[indiceAtual];
+          
+                // Faz fade IN mais lento
+                imgRotativa.style.transition = `opacity ${tempoFadeIn}ms ease-in-out`;
+                imgRotativa.style.opacity = 1;
+              }, tempoFadeOut);
+          
+              // Reagenda a próxima troca (fadeOut + fadeIn + tempo exibindo)
+              setTimeout(trocarImagem, tempoFadeOut + tempoFadeIn + tempoExibicao);
             }
-
-            // Garante que a imagem começa visível
+          
             imgRotativa.style.opacity = 1;
-
-            // Inicia o ciclo após o tempo de exibição inicial
-            setTimeout(trocarImagemSincronizado, tempoExibicao);
-        </script>
+            setTimeout(trocarImagem, tempoExibicao);
+          </script>
+          
+          
        </div>
     </div>   
  
