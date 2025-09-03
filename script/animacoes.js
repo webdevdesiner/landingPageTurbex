@@ -7,6 +7,15 @@
     ease: "power1.inOut"
   });
 
+  // Animação de entrada da logo com GSAP
+  gsap.from("#logo", {
+    duration: 2.4,
+    opacity: 0,
+    x: -100,
+    scale: 0.7,
+    ease: "power2.out"
+  });
+
 
   // Pulso infinito mais lento
   gsap.to("#pulsoInfinitolento", {
