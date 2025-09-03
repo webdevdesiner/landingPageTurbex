@@ -44,3 +44,40 @@
   });
 
 
+
+// Ativa o plugin
+gsap.registerPlugin(ScrollTrigger);
+
+// Função para animar um elemento por ID
+function animarScroll(id) {
+  gsap.from(id, {
+    scrollTrigger: {
+      trigger: id,          // dispara quando o elemento entra na tela
+      start: "top 80%",     // inicia quando o topo do elemento chega a 80% da tela
+      toggleActions: "play none none reverse" 
+    },
+    opacity: 0,             // começa invisível
+    y: 80,                  // desloca para baixo
+    duration: 1.2,          // tempo da animação
+    ease: "power3.out"      // suavização
+  });
+}
+
+// Chama a função para cada ID
+animarScroll("#animar-historia");
+animarScroll("#animar-compromisso");
+animarScroll("#animar-carrossel");
+
+// Também anima a imagem dentro da div .imgNigth
+gsap.from(".imgNigth img", {
+  scrollTrigger: {
+    trigger: ".imgNigth img",
+    start: "top 85%",
+    toggleActions: "play none none reverse"
+  },
+  opacity: 0,
+  y: 60,
+  scale: 0.92,
+  duration: 1.2,
+  ease: "power3.out"
+});
