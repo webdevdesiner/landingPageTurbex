@@ -236,11 +236,26 @@ body{
     overflow: hidden;
     border-radius: 15px;
 
-    
+    /* Esta linha aplica uma sombra ao redor de todo o container do carrossel.
+       O box-shadow: 0 8px 20px rgba(0,0,0,0.95); significa:
+       - 0: deslocamento horizontal (sem deslocamento para os lados)
+       - 8px: deslocamento vertical (a sombra fica 8px abaixo do elemento)
+       - 20px: raio de desfoque (quanto maior, mais "borrada" a sombra)
+       - rgba(0,0,0,0.95): cor da sombra (preto quase opaco, 95% de opacidade)
+       Isso cria um efeito de profundidade, destacando o carrossel do fundo. */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.95);
 }
+
+
+    
+    
+
 .carrossel-cards {
     display: flex;
     transition: transform 1s ease;
+
+    
+    
     
 }
 .card-produto {
@@ -248,9 +263,10 @@ body{
     box-sizing: border-box;
     padding: 24px;
     background: linear-gradient(to left,
-    #626262, #7d7d7d, #8c8c8c, #b9b9b9, #c9c8c8, #707070);
+    #b4b3b3, #c2c1c1, #c6c5c5, #b9b9b9, #c9c8c8, #9a9a9a);
     /* #c5c4c4, #c9c8c8, #b9b9b9, #8c8c8c, #7d7d7d, #3a3a3a); */
     
+
     
     display: flex;
     flex-direction: column;
@@ -263,9 +279,13 @@ body{
     margin-bottom: 16px;
     display: flex;
     justify-content: center;
-
-    
+    filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.6));  
 }
+
+
+
+
+
 .card-produto h3 {
     margin-bottom: 8px;
     color: #000000;
@@ -380,6 +400,7 @@ body{
     max-height: 500px;
     margin: 0 auto;
     display: block;
+    filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.6)); 
 }
 
 .tabelaNutricional
@@ -394,4 +415,65 @@ body{
     max-height: 400px;
     margin: 32px auto 0 auto;
     display: block;
+    filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.6)); 
 }
+
+
+
+/* Footer */
+
+#footer-detalhado {
+    background: #181818;
+    color: #fff;
+    min-height: 80px;
+    padding: 24px 0 12px 0;
+    font-size: 0.98rem;
+    border-top: 2px solid #EBC447;
+}
+
+.footer-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.footer-coluna {
+    flex: 1 1 220px;
+    min-width: 140px;
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    color: #EBC447;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-creditos {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #aaa;
+}
+/* 
+@media (max-width: 700px) {
+    .footer-conteudo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+    .footer-coluna {
+        margin-bottom: 18px;
+    }
+} */
+
+

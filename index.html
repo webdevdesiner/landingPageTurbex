@@ -23,9 +23,8 @@
        <div class="bgContent">
         <div id="menu-eclipse" class="menu-eclipse">
         <button>Início</button>
-        <button>Produtos</button>
+        <button type="button" onclick="event.preventDefault(); document.querySelector('#footer-detalhado').scrollIntoView({ behavior: 'smooth' }); return false;">Produtos</button>
         <button>Sobre</button>
-        <button>Depoimentos</button>
         <button>Contato</button>
         </div>
         <div class="bgImage">
@@ -156,9 +155,9 @@
             </div>
             <!-- Card 3 -->
             <div class="card-produto">
-                <img src="./image/produto3.png" alt="Produto 3">
-                <h3>BCAA Ultra</h3>
-                <p>Aminoácidos essenciais para melhor desempenho e recuperação muscular.</p>
+                <img src="./image/glutamina/Glutamina.png" alt="Produto 3">
+                <h3>Glutamina</h3>
+                <p>Glutamina: auxilia na recuperação muscular e fortalece o sistema imunológico.</p>
             </div>
         </div>
         <!-- Botões de navegação -->
@@ -199,6 +198,29 @@
 
 
 
+
+
+<footer id="footer-detalhado">
+    <div class="footer-conteudo">
+        <div class="footer-coluna">
+            <strong>Turbex Suplements</strong><br>
+            <span>© 2024 Todos os direitos reservados.</span>
+        </div>
+        <div class="footer-coluna">
+            <strong>Contato</strong><br>
+            <a href="mailto:contato@nigthtraining.com" class="footer-link">contato@turbex.com.br</a><br>
+            <span>WhatsApp: <a href="https://wa.me/5599999999999" class="footer-link">(18) 99999-9999</a></span>
+        </div>
+        <div class="footer-coluna">
+            <strong>Redes Sociais</strong><br>
+            <a href="#" class="footer-link" style="margin-right: 10px;"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" class="footer-link"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+    </div>
+    <div class="footer-creditos">
+        Em desenvolvimento por <a href="#" class="footer-link">Fernando Guedes</a>
+    </div>
+</footer>
 
 
 
