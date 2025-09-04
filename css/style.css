@@ -419,15 +419,49 @@ body{
 }
 
 
+/* call to action - representantes */
+
+.call-action-vendedores
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    height: 100vh;
+}
+
+.call-action-vendedores h1{
+    font-family: Impact, 'Arial Narrow Bold', Arial, sans-serif;
+}
+
+.figureCallFooter
+{
+    /* Ajustado para não cortar a imagem e garantir que ela seja totalmente exibida */
+    background-image: url(../image/footer/footer.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; /* Garante que a imagem inteira apareça sem corte */
+    width: auto;
+    max-width: 600px;
+    height: 220px;
+    min-height: 120px;
+}
+/* 
+style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 40px 0; text-align: center; margin-top: 32px;">
+    <div style="max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #222; font-family: 'Lucida Sans', Arial, sans-serif; margin-bottom: 16px;"
+
+        style="margin-top: 18px; color: #666; font-size: 0.95rem;" */
 
 /* Footer */
 
 .footer {
-    /* width: 100%; */
+    width: 100%;
     background: #111;
     color: #fff;
     text-align: center;
-    padding: 24px 16px;
+    padding: 24px 16px; 
     font-family: Arial, sans-serif;
     font-size: 0.9rem;
   }
