@@ -8,7 +8,7 @@
 /* /O background tera um degrade que ficara alternando enter as paletas (#ff0303 #ffffff )/ */
 body{
     background: linear-gradient(to left,
-    #ffffff, #ffffff, #b9b9b9, #8c8c8c, #7d7d7d, #3a3a3a);
+    #f8f6d4, #ffffff, #ffffff, #d9d8d8, #a7a6a6, #8a8a8a, #181818);
     background-size: 500% 500%;
     height: 100vh;
     width: 100vw;
