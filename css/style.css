@@ -362,13 +362,16 @@ body{
 {
     margin-top: 0;
     width: 100vw;
-    height: 150vh;
+    height: 80vh;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* background-color: pink; */
+
+
 }
 
 .textoDestaqueRaio
@@ -401,11 +404,13 @@ body{
     margin: 0 auto;
     display: block;
     filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.6)); 
+
 }
 
 .tabelaNutricional
 {
-    background-image: url(../image/Nigth/tabelaNigth.png);
+    display: none !important;
+    /* background-image: url(../image/Nigth/tabelaNigth.png); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -416,6 +421,42 @@ body{
     margin: 32px auto 0 auto;
     display: block;
     filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.6)); 
+}
+
+
+/* call to action - instagram*/
+
+.instagram-chamada
+{
+    width: 100%;
+    /* height: 100vh; */
+}  
+
+.instagram-chamada-conteudo
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;     /* Centraliza horizontalmente */
+    /* background-color: green; */
+    gap: 32px; /* Espaçamento entre os elementos */
+    text-align: center; /* Garante que o texto fique centralizado */
+
+    color: #000000;
+    text-shadow:
+        /* -0.1px -0.1px 0 #fff, */
+         /* 0.1px -0.1px 0 #fff, */
+        /* -1px  1px 0 #fff, */
+         /* 0.1px  0.1px 0 #fff; */
+         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+.instagram-chamada-conteudo img
+{
+    width: 100%;
 }
 
 
