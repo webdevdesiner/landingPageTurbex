@@ -9,7 +9,7 @@
 body{
     background: linear-gradient(to left,
     #f8f6d4, #ffffff, #ffffff, #d9d8d8, #a7a6a6, #8a8a8a, #181818);
-    background-size: 500% 500%;
+    background-size: 1000% 1000%;
     height: 100vh;
     width: 100vw;
     animation: alternaDegrade 10s linear infinite alternate;
