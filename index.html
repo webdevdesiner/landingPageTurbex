@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsividade.css">
     
     <title>Turbex Suplements</title>
 
@@ -14,7 +15,10 @@
 <body>
     <div class="areHeader">
         <div id="logo" class="logo">
-            <img id="pulsoInfinitolento" src="./image/logoTurbexPreto.png" alt="logo">
+            <img id="pulsoInfinitolento" src="./image/logoTurbexPreto.png" alt="logo">  
+        </div>
+        <div id="logo" class="logoBranca">
+            <img id="pulsoInfinitolento" src="./image/logoFooter.png" alt="logo Branca">  
         </div>
 
        <div class="headPunch">
@@ -28,20 +32,28 @@
         <button>Contato</button>
         </div>
         <div class="bgImage">
-            <div class="produtos-slider">
-                <img id="produto-rotativo" src="./image/produtos/produto1.png" alt="Produto Turbex" >
+            <div class="produtos-slider">                
+                <img id="produto-rotativo" src="./image/BannerTop/desk-produto-BannerTop/B-start.png" alt="Produto Turbex" >
             </div>
         </div>
         <script>
-            // Lista de imagens
-            const imagensProdutos = [
-              './image/BannerTop/produto-BannerTop/B-Cafeina.png',
-              './image/BannerTop/produto-BannerTop/B-Frutas Negras.png',
-              './image/BannerTop/produto-BannerTop/B-NigthTraining.png',
-              './image/BannerTop/produto-BannerTop/B-Cafeina.png',
-              './image/BannerTop/produto-BannerTop/B-Frutas Negras.png',
-              './image/BannerTop/produto-BannerTop/B-NigthTraining.png'
+            // Lista de imagens mobile
+            const imagensMobile = [
+              './image/BannerTop/mobile-produto-BannerTop/B-Cafeina.png',
+              './image/BannerTop/mobile-produto-BannerTop/B-Frutas Negras.png',
+              './image/BannerTop/mobile-produto-BannerTop/B-NigthTraining.png',
+              './image/BannerTop/mobile-produto-BannerTop/B-Cafeina.png',
+              './image/BannerTop/mobile-produto-BannerTop/B-Frutas Negras.png',
+              './image/BannerTop/mobile-produto-BannerTop/B-NigthTraining.png'
             ];
+
+            // Lista de imagens Desk
+            const imagensDesktop = [
+              './image/BannerTop/mobile-produto-BannerTop/desk-B-Cafeina.png'
+            ];
+
+             // Decide qual lista usar
+            const imagensProdutos = window.innerWidth >= 992 ? imagensDesktop : imagensMobile;
           
             let indiceAtual = 0;
             const imgRotativa = document.getElementById('produto-rotativo');

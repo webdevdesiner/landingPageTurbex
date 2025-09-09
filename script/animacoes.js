@@ -16,6 +16,15 @@
     ease: "power2.out"
   });
 
+    // Animação de entrada da logo branca com GSAP
+    gsap.from("#logoBranca", {
+      duration: 1.4,
+      opacity: 0,
+      x: -300,
+      scale: 7,
+      ease: "power2.out"
+    });
+
 
   // Pulso infinito mais lento
   gsap.to("#pulsoInfinitolento", {
