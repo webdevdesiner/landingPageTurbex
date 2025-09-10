@@ -176,6 +176,11 @@
   
 }
 
+.carrossel-cards
+{
+  flex: 1;
+}
+
 .detalhesProdutos
 {
   display: flex;
@@ -183,16 +188,69 @@
     background-color: rgba(255, 255, 255, 0.62);
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
 }
 
-.carrossel-cards
+
+
+
+/* Area de Descriçao dos card - secundario Desk */
+
+.areaDetalhesProdutos
+{
+  width: 90%;
+  height: 90%;
+
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  /* background-color: pink; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+
+
+.tituloProdutos
+{
+  width: 100%;
+  /* background-color: green; */
+  text-align: center;
+}
+
+.tabelaDescricao
+{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* background-color: black; */
+}
+
+.descicaoProduto
 {
   flex: 1;
+  padding-top: 5%;
+  height: 90%;
+  text-align: justify;
+  /* background-color: orange; */
 }
 
+.tabelaProdutos
+{
+  flex: 1;
+  height: 90%;
+  /* background-color: orangered; */
+  background-image: url(../image/Nigth/tabelaNigth.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-
-
-
+.tabelaProdutos image-rendering: 
+{
+  width: 100%;
+};
 
   }
