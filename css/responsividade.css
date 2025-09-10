@@ -255,13 +255,23 @@
 
 
 
+/* instagram Chamada */
 
-/* area instagram chamada */
-.instagram-chamada-conteudo img
-{
-    width: auto;
-    background-color: pink;
+.instagram-chamada
+  {
     height: 100vh;
-}  
+  }
+
+.instagram-chamada-conteudoImg {
+  width: 100%;       /* ou um valor fixo */
+  height: 100%;     /* defina uma altura */
+  background-image: url(../image/imagemIntagramdesk.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
 
   }

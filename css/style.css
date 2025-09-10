@@ -464,10 +464,10 @@ body{
 
 
 .instagram-chamada-conteudoImg {
-    width: auto;       /* ou um valor fixo */
-    height: 100vh;     /* defina uma altura */
+    width: 100%;       /* ou um valor fixo */
+    height: 100%;     /* defina uma altura */
     background-image: url(../image/imagemIntagram.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -480,12 +480,18 @@ body{
 {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 20px;
     width: 100%;
     height: 100vh;
-    text-align: center
+    text-align: center;
+
+    background-color: orange    ;
+
 }
+
+
 
 .call-action-vendedores h1{
     font-family: Impact, 'Arial Narrow Bold', Arial, sans-serif;
@@ -498,11 +504,14 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain; /* Garante que a imagem inteira apareça sem corte */
-    width: auto;
+    width: 100%;
     max-width: 600px;
     height: 220px;
     min-height: 120px;
     filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.6)); 
+    background-color: pink;
+
+    margin: 0 auto; 
 }
 /* 
 style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 40px 0; text-align: center; margin-top: 32px;">
