@@ -220,6 +220,10 @@ body{
 
 /* Estilos do Carrossel - Apenas um card visível por vez, em linha única */
 
+.detalhesProdutos
+{
+    display: none;
+}
 
 .carrossel-produtos {
     width: 100%;
@@ -450,12 +454,12 @@ body{
     text-align: center; /* Garante que o texto fique centralizado */
 
     color: #000000;
-    text-shadow:
+    /* text-shadow: */
         /* -0.1px -0.1px 0 #fff, */
          /* 0.1px -0.1px 0 #fff, */
         /* -1px  1px 0 #fff, */
          /* 0.1px  0.1px 0 #fff; */
-         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+         /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 }
 
 

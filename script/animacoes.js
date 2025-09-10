@@ -85,7 +85,7 @@ gsap.from(".imgNigth img", {
     toggleActions: "play none none reverse"
   },
   opacity: 0,
-  y: 60,
+  y: 30,
   scale: 0.92,
   duration: 1.2,
   ease: "power3.out"

@@ -27,7 +27,7 @@
        <div class="bgContent">
         <div id="menu-eclipse" class="menu-eclipse">
         <button>Início</button>
-        <button type="button" onclick="event.preventDefault(); document.querySelector('#footer-detalhado').scrollIntoView({ behavior: 'smooth' }); return false;">Produtos</button>
+        <button>Produtos</button>
         <button>Sobre</button>
         <button>Contato</button>
         </div>
@@ -42,6 +42,7 @@
               './image/BannerTop/mobile-produto-BannerTop/B-Cafeina.png',
               './image/BannerTop/mobile-produto-BannerTop/B-Frutas Negras.png',
               './image/BannerTop/mobile-produto-BannerTop/B-NigthTraining.png',
+              './image/BannerTop/mobile-produto-BannerTop/B-Glutamina.png',
               './image/BannerTop/mobile-produto-BannerTop/B-Cafeina.png',
               './image/BannerTop/mobile-produto-BannerTop/B-Frutas Negras.png',
               './image/BannerTop/mobile-produto-BannerTop/B-NigthTraining.png'
@@ -49,7 +50,9 @@
 
             // Lista de imagens Desk
             const imagensDesktop = [
-              './image/BannerTop/mobile-produto-BannerTop/desk-B-Cafeina.png'
+              './image/BannerTop/mobile-produto-BannerTop/desk-B-Cafeina.png',
+              './image/BannerTop/mobile-produto-BannerTop/desk-B-Nigth.png',
+              './image/BannerTop/mobile-produto-BannerTop/desk-B-Glutamina.png',
             ];
 
              // Decide qual lista usar
@@ -151,7 +154,10 @@
 <!-- HTML do Carrossel de Produtos -->
 <section id="animar-carrossel" class="carrossel-produtos">
     <h2>Encontre o Suplemento Ideal</h2>
+   <div class="card-descricao">
+    
     <div class="carrossel-container">
+        
         <div class="carrossel-cards">
             <!-- Card 1 -->
             <div class="card-produto">
@@ -180,6 +186,8 @@
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>
+    <div class="detalhesProdutos"></div>
+   </div>
     <!-- Indicadores -->
     <div  class="indicadores-carrossel">
         <span class="indicador ativo"></span>
