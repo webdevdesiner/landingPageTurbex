@@ -154,3 +154,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializa
     atualizarCarrossel();
 });
+
+
+document.querySelectorAll('#menu-eclipse button').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const alvo = document.querySelector(this.dataset.target);
+      if (alvo) {
+        alvo.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+  
