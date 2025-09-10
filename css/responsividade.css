@@ -248,9 +248,20 @@
   background-position: center;
 }
 
-.tabelaProdutos image-rendering: 
+/* .tabelaProdutos image-rendering: 
 {
   width: 100%;
-};
+} */
+
+
+
+
+/* area instagram chamada */
+.instagram-chamada-conteudo img
+{
+    width: auto;
+    background-color: pink;
+    height: 100vh;
+}  
 
   }

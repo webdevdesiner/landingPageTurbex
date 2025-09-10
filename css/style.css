@@ -463,11 +463,15 @@ body{
 }
 
 
-
-.instagram-chamada-conteudo img
-{
-    width: 100%;
+.instagram-chamada-conteudoImg {
+    width: auto;       /* ou um valor fixo */
+    height: 100vh;     /* defina uma altura */
+    background-image: url(../image/imagemIntagram.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 
 
 /* call to action - representantes */
