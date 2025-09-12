@@ -304,7 +304,7 @@
   width: 300px; /* Largura do holofote */
   height: 300px; /* Altura do holofote */
   background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.3) 0%, transparent 70%); /* Gradiente radial amarelo */
-  z-index: 999; /* Camada de profundidade */
+  z-index: 5; /* Camada de profundidade baixa para não interferir nos cards */
 }
 
 /* Holofote posicionado à esquerda */
@@ -354,6 +354,8 @@
   position: relative; /* Posicionamento relativo */
   width: 100%; /* Largura total */
   height: 400px; /* Altura fixa */
+  overflow: visible; /* Permite que os cards sejam visíveis */
+  z-index: 10; /* Garante que fique acima dos elementos de fundo */
 }
 
 /* Trilha do carrossel com animação */
@@ -365,6 +367,7 @@
   height: 100%; /* Altura total */
   animation: scroll 30s linear infinite; /* Animação de rolagem contínua */
   will-change: transform; /* Otimização de performance */
+  z-index: 15; /* Garante que fique acima dos elementos de fundo */
 }
 
 /* Card individual de depoimento */
@@ -383,6 +386,10 @@
   backdrop-filter: blur(3px); /* Efeito de desfoque no fundo */
   border: 1px solid rgba(0, 0, 0, 0.2); /* Borda sutil */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+  z-index: 20; /* Garante que fique acima dos elementos de fundo */
+  position: relative; /* Permite posicionamento relativo */
+  opacity: 1; /* Garante que seja visível */
+  visibility: visible; /* Garante que seja visível */
 }
 
 /* Efeito hover no card de depoimento */
