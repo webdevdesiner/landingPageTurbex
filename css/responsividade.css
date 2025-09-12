@@ -272,6 +272,189 @@
 }
 
 
+/* Area de Depoimentos - Testimonials - Cases */
 
+/* Seção principal de depoimentos - container geral */
+.testimonials-section {
+  position: relative; /* Posicionamento relativo para elementos filhos absolutos */
+  min-height: 100vh; /* Altura mínima de 100% da viewport */
+  background: url('../image/Old-Turbex-Desk.png') center/cover; /* Imagem de fundo centralizada */
+  display: flex; /* Layout flexbox */
+  align-items: end; /* Alinha itens no final (parte inferior) */
+  justify-content: center; /* Centraliza horizontalmente */
+  overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
+}
+
+/* Overlay de fundo para efeitos visuais */
+.background-overlay {
+  position: absolute; /* Posicionamento absoluto */
+  top: 0; /* Posição no topo */
+  left: 0; /* Posição à esquerda */
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  z-index: 1; /* Camada de profundidade */
+}
+
+
+
+/* Efeito de holofote decorativo */
+.spotlight {
+  position: absolute; /* Posicionamento absoluto */
+  width: 600px; /* Largura do holofote */
+  height: 300px; /* Altura do holofote */
+  background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.3) 0%, transparent 70%); /* Gradiente radial amarelo */
+  z-index: 999; /* Camada de profundidade */
+}
+
+/* Holofote posicionado à esquerda */
+.spotlight-left {
+  top: -50px; /* Posição acima do container */
+  left: -100px; /* Posição à esquerda do container */
+  transform: rotate(-15deg); /* Rotação de -15 graus */
+}
+
+/* Holofote posicionado à direita */
+.spotlight-right {
+  top: -50px; /* Posição acima do container */
+  right: -100px; /* Posição à direita do container */
+  transform: rotate(15deg); /* Rotação de 15 graus */
+}
+
+/* Container do conteúdo principal */
+.content {
+  position: relative; /* Posicionamento relativo */
+  z-index: 2; /* Camada acima dos elementos de fundo */
+  text-align: center; /* Alinhamento central do texto */
+  width: 100%; /* Largura total */
+  max-width: 1200px; /* Largura máxima */
+  padding: 2rem; /* Espaçamento interno */
+}
+
+/* Título da seção */
+.section-title {
+  color: white; /* Cor branca do texto */
+  font-size: 3rem; /* Tamanho grande da fonte */
+  font-weight: 700; /* Peso da fonte pesado */
+  margin-bottom: 4rem; /* Margem inferior */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra do texto */
+  letter-spacing: 0.1rem; /* Espaçamento entre letras */
+}
+
+/* Container do carrossel de depoimentos */
+.testimonials-carousel {
+  position: relative; /* Posicionamento relativo */
+  width: 100%; /* Largura total */
+  overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
+}
+
+/* Container interno do carrossel */
+.carousel-container {
+  position: relative; /* Posicionamento relativo */
+  width: 100%; /* Largura total */
+  height: 400px; /* Altura fixa */
+}
+
+/* Trilha do carrossel com animação */
+.carousel-track {
+  display: flex; /* Layout flexbox */
+  position: absolute; /* Posicionamento absoluto */
+  left: 0; /* Posição à esquerda */
+  top: 0; /* Posição no topo */
+  height: 100%; /* Altura total */
+  animation: scroll 30s linear infinite; /* Animação de rolagem contínua */
+  will-change: transform; /* Otimização de performance */
+}
+
+/* Card individual de depoimento */
+.testimonial-card {
+  flex: 0 0 350px; /* Largura fixa sem crescimento */
+  height: 350px; /* Altura fixa */
+  margin: 0 20px; /* Margem horizontal */
+  background: rgba(255, 255, 255, 0.342); /* Fundo branco semi-transparente */
+  border-radius: 20px; /* Bordas arredondadas */
+  padding: 2rem; /* Espaçamento interno */
+  display: flex; /* Layout flexbox */
+  flex-direction: column; /* Direção vertical */
+  align-items: center; /* Alinhamento central */
+  text-align: center; /* Texto centralizado */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra do card */
+  backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Borda sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+/* Efeito hover no card de depoimento */
+.testimonial-card:hover {
+  transform: translateY(-10px); /* Move o card para cima */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+}
+
+/* Container da foto de perfil */
+.profile-pic {
+  width: 80px; /* Largura da foto */
+  height: 80px; /* Altura da foto */
+  border-radius: 50%; /* Formato circular */
+  overflow: hidden; /* Esconde partes que ultrapassam */
+  margin-bottom: 1rem; /* Margem inferior */
+  border: 3px solid #FFD700; /* Borda dourada */
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3); /* Sombra dourada */
+}
+
+/* Imagem dentro da foto de perfil */
+.profile-pic img {
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+  object-fit: cover; /* Preenche o container mantendo proporção */
+}
+
+/* Nome do cliente */
+.client-name {
+  color: #333; /* Cor escura do texto */
+  font-size: 1.5rem; /* Tamanho da fonte */
+  font-weight: 700; /* Peso da fonte pesado */
+  margin-bottom: 1rem; /* Margem inferior */
+  text-shadow: none; /* Remove sombra do texto */
+}
+
+/* Texto do depoimento */
+.testimonial-text {
+  color: #666; /* Cor cinza do texto */
+  font-size: 1rem; /* Tamanho da fonte */
+  line-height: 1.6; /* Altura da linha */
+  margin-bottom: 1.5rem; /* Margem inferior */
+  flex-grow: 1; /* Cresce para preencher espaço */
+  display: -webkit-box; /* Layout de caixa webkit */
+  -webkit-line-clamp: 4; /* Limita a 4 linhas */
+  -webkit-box-orient: vertical; /* Orientação vertical */
+  overflow: hidden; /* Esconde texto que ultrapassa */
+}
+
+/* Container das estrelas de avaliação */
+.rating {
+  display: flex; /* Layout flexbox */
+  gap: 5px; /* Espaçamento entre estrelas */
+  justify-content: center; /* Centraliza as estrelas */
+}
+
+/* Estrela individual */
+.star {
+  color: #FFD700; /* Cor dourada */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra brilhante */
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-350px * 5 - 40px * 5));
+  }
+}
+
+/* Pausa a animação no hover */
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}
 
   }
