@@ -78,17 +78,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const produtos = [
         {
             titulo: "Creatina em pó - 150g",
-            descricao: "A Creatina Monohidratada Turbex é o suplemento ideal para atletas e praticantes de atividades físicas que buscam melhorar o desempenho e a recuperação muscular. Com 150g de alta pureza e concentração, cada dose garante força, explosão e energia para superar limites nos treinos mais intensos.Aumenta a força muscular: Ajuda a melhorar o desempenho em exercícios de alta intensidade. Energia explosiva: Reabastece rapidamente os estoques de energia muscular (ATP).Recuperação otimizada: Reduz o tempo de recuperação muscular entre séries e treinos.Auxilia no ganho de massa muscular: Estimula a retenção de água nas células, promovendo volume e crescimento muscular.Fácil de consumir",
+            descricao: "A Creatina Monohidratada Turbex é o suplemento ideal para atletas e praticantes de atividades físicas que buscam melhorar o desempenho e a recuperação muscular. Com 150g de alta pureza e concentração, cada dose garante força, explosão e energia para superar limites nos treinos mais intensos.Aumenta a força muscular: Ajuda a melhorar o desempenho em exercícios de alta intensidade",
             tabela: "./image/Nigth/tabelaNigth2.png"
         },
         {
             titulo: "Pré-Treino - Nigth Training",
-            descricao: "Suplemento alimentar em pastilhas mastigáveis. Energia e resistência durante os treinos.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, sequi corporis! Aperiam a beatae, reiciendis fuga tempora ex accusantium! In eligendi eos nisi atque id accusamus cum quaerat eveniet quod.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis eos optio magni itaque quisquam, quas nemo hic magnam ullam necessitatibus excepturi maxime illo sunt consequuntur natus nostrum! Accusantium, similique quam!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, sequi corporis! Aperiam a beatae, reiciendis fuga tempora ex accusantium! In eligendi eos nisi atque id accusamus cum ",
+            descricao: "Suplemento alimentar em pastilhas mastigáveis. Energia e resistência durante os treinos.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, sequi corporis! Aperiam a beatae, reiciendis fuga tempora ex accusantium! In eligendi eos nisi atque id accusamus cum quaerat eveniet quod.Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
             tabela: "./image/Nigth/tabelaNigth2.png"
         },
         {
             titulo: "Glutamina",
-            descricao: "Auxilia na recuperação muscular e fortalece o sistema imunológico. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, sequi corporis! Aperiam a beatae, reiciendis fuga tempora ex accusantium! In eligendi eos nisi atque id accusamus cum quaerat eveniet quod.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis eos optio magni itaque quisquam, quas nemo hic magnam ullam necessitatibus excepturi maxime illo sunt consequuntur natus nostrum! Accusantium, similique quam!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, sequi corporis! Aperiam a beatae, reiciendis fuga tempora ex accusantium! In eligendi eos nisi atque id accusamus cum ",
+            descricao: "Auxilia na recuperação muscular e fortalece o sistema imunológico. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, sequi corporis! Aperiam a beatae, reiciendis fuga tempora ex accusantium! In eligendi eos nisi atque id accusamus cum quaerat eveniet quod.Lorem ipsum, ",
             tabela: "./image/Nigth/tabelaNigth2.png"
         }
     ];
