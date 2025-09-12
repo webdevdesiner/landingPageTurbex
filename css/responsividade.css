@@ -300,7 +300,7 @@
 /* Efeito de holofote decorativo */
 .spotlight {
   position: absolute; /* Posicionamento absoluto */
-  width: 600px; /* Largura do holofote */
+  width: 300px; /* Largura do holofote */
   height: 300px; /* Altura do holofote */
   background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.3) 0%, transparent 70%); /* Gradiente radial amarelo */
   z-index: 999; /* Camada de profundidade */
@@ -311,12 +311,13 @@
   top: -50px; /* Posição acima do container */
   left: -100px; /* Posição à esquerda do container */
   transform: rotate(-15deg); /* Rotação de -15 graus */
+  display: none;
 }
 
 /* Holofote posicionado à direita */
 .spotlight-right {
   top: -50px; /* Posição acima do container */
-  right: -100px; /* Posição à direita do container */
+  right: 25%; /* Posição à direita do container */
   transform: rotate(15deg); /* Rotação de 15 graus */
 }
 
@@ -344,7 +345,7 @@
 .testimonials-carousel {
   position: relative; /* Posicionamento relativo */
   width: 100%; /* Largura total */
-  overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
+  overflow: visible; /* hidem esconde - porem deixei visible o conteúdo que ultrapassa os limites */
 }
 
 /* Container interno do carrossel */
