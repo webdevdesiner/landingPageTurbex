@@ -263,15 +263,12 @@ body{
 .carrossel-cards {
     display: flex;
     transition: transform 1s ease;
-
-    
-    
-    
-}
+    }
 .card-produto {
     min-width: 100%;
     box-sizing: border-box;
     padding: 24px;
+    gap: 50px;
     background: linear-gradient(to left,
     #b4b3b3, #c2c1c1, #c6c5c5, #b9b9b9, #c9c8c8, #9a9a9a);
     /* #c5c4c4, #c9c8c8, #b9b9b9, #8c8c8c, #7d7d7d, #3a3a3a); */
@@ -293,7 +290,11 @@ body{
 }
 
 
-
+.descicaoProduto
+{
+    padding-right: 20px;
+    /* background-color: yellow; */
+}
 
 
 .card-produto h3 {
@@ -550,6 +551,10 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
   .footer-redes a {
     display: inline-block;
     margin: 0 8px;
+    ont-size: 28px;     /* tamanho do ícone */
+    color: #333;         /* cor padrão */
+    margin: 0 10px;
+    transition: color 0.3s ease;
   }
   
   .footer-redes img {
@@ -561,6 +566,10 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
   
   .footer-redes img:hover {
     transform: scale(1.2);
+  }
+
+  .footer-redes a:hover {
+    color: #EEC343;      /* muda a cor no hover */
   }
   
   .footer-copy {

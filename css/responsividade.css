@@ -260,6 +260,7 @@
 .instagram-chamada
   {
     height: 100vh;
+    margin-top: 20px;
   }
 
 .instagram-chamada-conteudoImg {
@@ -371,7 +372,7 @@
   flex: 0 0 350px; /* Largura fixa sem crescimento */
   height: 350px; /* Altura fixa */
   margin: 0 20px; /* Margem horizontal */
-  background: rgba(255, 255, 255, 0.342); /* Fundo branco semi-transparente */
+  background: rgba(255, 255, 255, 0.223); /* Fundo branco semi-transparente */
   border-radius: 20px; /* Bordas arredondadas */
   padding: 2rem; /* Espaçamento interno */
   display: flex; /* Layout flexbox */
@@ -379,7 +380,7 @@
   align-items: center; /* Alinhamento central */
   text-align: center; /* Texto centralizado */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra do card */
-  backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+  backdrop-filter: blur(3px); /* Efeito de desfoque no fundo */
   border: 1px solid rgba(0, 0, 0, 0.2); /* Borda sutil */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
 }
@@ -388,6 +389,7 @@
 .testimonial-card:hover {
   transform: translateY(-10px); /* Move o card para cima */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
+  background: rgba(255, 255, 255, 0.594); /* Fundo branco semi-transparente */
 }
 
 /* Container da foto de perfil */
@@ -410,7 +412,7 @@
 
 /* Nome do cliente */
 .client-name {
-  color: #333; /* Cor escura do texto */
+  color: #000000; /* Cor escura do texto */
   font-size: 1.5rem; /* Tamanho da fonte */
   font-weight: 700; /* Peso da fonte pesado */
   margin-bottom: 1rem; /* Margem inferior */
@@ -419,7 +421,7 @@
 
 /* Texto do depoimento */
 .testimonial-text {
-  color: #666; /* Cor cinza do texto */
+  color: #000000; /* Cor cinza do texto */
   font-size: 1rem; /* Tamanho da fonte */
   line-height: 1.6; /* Altura da linha */
   margin-bottom: 1.5rem; /* Margem inferior */
@@ -441,7 +443,8 @@
 .star {
   color: #FFD700; /* Cor dourada */
   font-size: 1.2rem; /* Tamanho da fonte */
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra brilhante */
+  text-shadow: 0 0 10px rgba(15, 13, 2, 0.5);/* Sombra brilhante */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);/* Sombra mais intensa */
 }
 
 @keyframes scroll {
@@ -457,5 +460,101 @@
 .carousel-container:hover .carousel-track {
   animation-play-state: paused;
 }
+
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  background: #111;
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 16px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerLogoContato {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.footer-logo img {
+  width: 140px;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.footer-contatos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 8px;
+}
+
+.footer-contatos p {
+  margin: 4px 0;
+  text-align: center;
+}
+
+.footer-redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 16px;
+}
+
+.footer-redes a {
+  display: inline-block;
+  /* margin: 0 8px; */
+  font-size: 28px;     /* tamanho do ícone */
+  color: #333;         /* cor padrão */
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-redes img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0
+    ) invert(1);
+  transition: transform 0.3s;
+}
+
+.footer-redes a:hover {
+  color: #EEC343;      /* muda a cor no hover */
+}
+
+.footer-redes img:hover {
+  transform: scale(1.2);
+}
+
+.footer-copy {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: #bbb;
+  width: 100%;
+  text-align: center;
+}
+
+
+
 
   }
