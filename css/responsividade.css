@@ -80,7 +80,7 @@
       left: 50%; /* Centraliza horizontalmente */
       bottom: 0; /* Alinha à base do container */
       /* top: auto; Remove qualquer valor anterior de 'top' */
-      transform: translateX(-50%); /* Ajusta para centralizar perfeitamente */
+      transform: translateX(-65%); /* Ajusta para centralizar perfeitamente */
       pointer-events: auto; /* Permite interação com o mouse */
       display: block; /* Garante que o elemento seja exibido como bloco */
     }
