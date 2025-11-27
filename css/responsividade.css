@@ -162,7 +162,9 @@
 
 .carrossel-produtos .card-produto h3,
 .carrossel-produtos .card-produto p {
-  display: none;
+  display: block;
+  text-align: center;
+  margin-bottom: 12px;
 }
 
 .card-descricao
@@ -186,6 +188,15 @@
   max-width: 100%;   /* Nunca passa do limite do container */
   height: auto;      /* Mantém a proporção original */
   display: block;    /* Evita espaços extras em imagens inline */
+}
+.card-produto .produto-accordion {
+  margin-top: 20px;
+}
+.card-produto .accordion-trigger {
+  font-size: 0.95rem;
+}
+.card-produto .accordion-content {
+  font-size: 0.95rem;
 }
 
 .detalhesProdutos
@@ -450,6 +461,7 @@
   flex-grow: 1; /* Cresce para preencher espaço */
   display: -webkit-box; /* Layout de caixa webkit */
   -webkit-line-clamp: 4; /* Limita a 4 linhas */
+  line-clamp: 4; /* Propriedade padrão */
   -webkit-box-orient: vertical; /* Orientação vertical */
   overflow: hidden; /* Esconde texto que ultrapassa */
 }
