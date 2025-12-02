@@ -153,178 +153,158 @@
     <div style="width: 100vw; height: 2px; background: linear-gradient(to right, #919191, #ffffff, #ffffff); border: none; margin: 32px 0 0 0; padding: 0;"></div>
 
 
-<!-- Carrossel de Produtos -->
-<!-- HTML do Carrossel de Produtos -->
-<section id="animar-carrossel" class="carrossel-produtos">
-    <h2 >Encontre o Suplemento Ideal</h2>
-   <div class="card-descricao">
-    
-    <div class="carrossel-container">
+<!-- Seção de Produtos Premium -->
+<section id="produtos" class="produtos-section">
+    <div class="produtos-container">
+        <h2 class="produtos-titulo">Nossos Produtos</h2>
         
-        <div  id="produtos" class="carrossel-cards">
-            <!-- Card 1 -->
-            <div class="card-produto">
-                <img src="./image/produto1.png" alt="Produto 1">
-                <h3>Creatina em pó - 150g</h3>
-                <p>Creatina monohidratada micronizada para potência e recuperação diária.</p>
+        <div class="produtos-grid">
+            <!-- Card Creatina -->
+            <div class="produto-card">
+                <div class="produto-imagem-container">
+                    <img src="./image/produto1.png" alt="Creatina Turbex" class="produto-imagem">
+                    <img src="./image/produto1.png" alt="Creatina Turbex" class="produto-imagem img-hover">
+                </div>
+                <div class="produto-info">
+                    <span class="produto-categoria">Aminoácido</span>
+                    <h3 class="produto-nome">Creatina Monohidratada</h3>
+                    <p class="produto-descricao-curta">Aumenta força, explosão e energia para superar limites nos treinos mais intensos.</p>
+                </div>
                 <div class="produto-accordion" data-accordion>
                     <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Benefícios</span>
-                            <span class="chevron" aria-hidden="true"></span>
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <span>Ver Detalhes</span>
+                            <span class="chevron"></span>
                         </button>
                         <div class="accordion-content">
-                            <p>Aumento de força, recuperação muscular acelerada e melhora na performance cerebral.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Tabela Nutricional</span>
-                            <span class="chevron" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Porção de 3g: Creatina 3000mg, Carboidratos 0g, Sódio 0mg.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Ingredientes</span>
-                            <span class="chevron" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Creatina Monohidratada micronizada. NÃO CONTÉM GLÚTEN.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Sugestão de Uso</span>
-                            <span class="chevron" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Diluir 3g (1 scoop) em 200ml de água ou bebida de sua preferência. Consumir uma vez ao dia.</p>
+                            <div class="produto-detalhes">
+                                <div class="detalhe-secao">
+                                    <h4>Tabela Nutricional</h4>
+                                    <div class="tabela-nutricional">
+                                        <table>
+                                            <tr>
+                                                <th>Informação Nutricional</th>
+                                                <th>Porção (5g)</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Valor Energético</td>
+                                                <td>0 kcal</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Creatina Monohidratada</td>
+                                                <td>5g</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="detalhe-secao">
+                                    <h4>Modo de Uso</h4>
+                                    <p>Diluir 1 dose (5g) em 200ml de água ou bebida de sua preferência. Consumir preferencialmente após o treino ou conforme orientação de nutricionista ou médico.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Card 2 -->
-            <div class="card-produto">
-                <img src="./image/Nigth/produto2.png" alt="Produto 2">
-                <h3>Pré-Treino - Nigth Training</h3>
-                <p>Blend noturno com cafeína inteligente para treinos intensos após o expediente.</p>
+
+            <!-- Card Pré-Treino -->
+            <div class="produto-card">
+                <div class="produto-imagem-container">
+                    <img src="./image/Nigth/produto2.png" alt="Pré-Treino Night Training" class="produto-imagem">
+                    <img src="./image/Nigth/produto2.png" alt="Pré-Treino Night Training" class="produto-imagem img-hover">
+                </div>
+                <div class="produto-info">
+                    <span class="produto-categoria">Pré-Treino</span>
+                    <h3 class="produto-nome">Night Training</h3>
+                    <p class="produto-descricao-curta">Energia e resistência durante os treinos. Suplemento em pastilhas mastigáveis.</p>
+                </div>
                 <div class="produto-accordion" data-accordion>
                     <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Benefícios</span>
-                            <span class="chevron" aria-hidden="true"></span>
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <span>Ver Detalhes</span>
+                            <span class="chevron"></span>
                         </button>
                         <div class="accordion-content">
-                            <p>Explosão de energia com liberação gradual, maior foco mental e redução da fadiga ao fim do dia.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Tabela Nutricional</span>
-                            <span class="chevron" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Porção de 10g: Cafeína 200mg, Taurina 1500mg, Beta-alanina 3200mg, Vitaminas do complexo B.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Ingredientes</span>
-                            <span class="chevron" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Blend proprietário com cafeína anidra, taurina, beta-alanina, extrato de chá verde e aromas naturais.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Sugestão de Uso</span>
-                            <span class="chevron" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Misturar 1 scoop em 300ml de água 30 minutos antes do treino noturno. Não exceder 1 dose diária.</p>
+                            <div class="produto-detalhes">
+                                <div class="detalhe-secao">
+                                    <h4>Tabela Nutricional</h4>
+                                    <div class="tabela-nutricional">
+                                        <table>
+                                            <tr>
+                                                <th>Informação Nutricional</th>
+                                                <th>Porção (2 pastilhas)</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Valor Energético</td>
+                                                <td>8 kcal</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cafeína</td>
+                                                <td>200mg</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="detalhe-secao">
+                                    <h4>Modo de Uso</h4>
+                                    <p>Mastigar 2 pastilhas 30 minutos antes do treino. Não exceder 4 pastilhas por dia. Não consumir próximo ao horário de dormir.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Card 3 -->
-            <div class="card-produto">
-                <img src="./image/glutamina/Glutamina.png" alt="Produto 3">
-                <h3>Glutamina</h3>
-                <p>Suplemento puro para imunidade e recuperação muscular no pós-treino.</p>
+
+            <!-- Card Glutamina -->
+            <div class="produto-card">
+                <div class="produto-imagem-container">
+                    <img src="./image/glutamina/Glutamina.png" alt="Glutamina Turbex" class="produto-imagem">
+                    <img src="./image/glutamina/Glutamina.png" alt="Glutamina Turbex" class="produto-imagem img-hover">
+                </div>
+                <div class="produto-info">
+                    <span class="produto-categoria">Aminoácido</span>
+                    <h3 class="produto-nome">Glutamina</h3>
+                    <p class="produto-descricao-curta">Auxilia na recuperação muscular e fortalece o sistema imunológico.</p>
+                </div>
                 <div class="produto-accordion" data-accordion>
                     <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Benefícios</span>
-                            <span class="chevron" aria-hidden="true"></span>
+                        <button class="accordion-trigger" aria-expanded="false">
+                            <span>Ver Detalhes</span>
+                            <span class="chevron"></span>
                         </button>
                         <div class="accordion-content">
-                            <p>Ajuda na reparação muscular, reforça o sistema imunológico e melhora a saúde intestinal.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Tabela Nutricional</span>
-                            <span class="chevron" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Porção de 5g: L-Glutamina 5000mg, carboidratos 0g, gorduras 0g, sódio 0mg.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Ingredientes</span>
-                            <span class="chevron" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>L-Glutamina isolada (Kyowa Quality). NÃO CONTÉM GLÚTEN.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" type="button" aria-expanded="false">
-                            <span>Sugestão de Uso</span>
-                            <span class="chevron" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Dissolver 1 scoop em 150ml de água logo após o treino ou conforme orientação nutricional.</p>
+                            <div class="produto-detalhes">
+                                <div class="detalhe-secao">
+                                    <h4>Tabela Nutricional</h4>
+                                    <div class="tabela-nutricional">
+                                        <table>
+                                            <tr>
+                                                <th>Informação Nutricional</th>
+                                                <th>Porção (5g)</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Valor Energético</td>
+                                                <td>0 kcal</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Glutamina</td>
+                                                <td>5g</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="detalhe-secao">
+                                    <h4>Modo de Uso</h4>
+                                    <p>Diluir 1 dose (5g) em 200ml de água. Consumir após o treino ou antes de dormir. Consulte um nutricionista ou médico para orientação personalizada.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Botões de navegação -->
-        <button class="btn-carrossel anterior" aria-label="Anterior">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="btn-carrossel proximo" aria-label="Próximo">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-    </div>
-    <div class="detalhesProdutos">
-        <div class="areaDetalhesProdutos">
-            <div class="tituloProdutos"><h3>Titulo Produto</h3></div>
-            <div class="tabelaDescricao">
-                <div class="descicaoProduto">
-                    <p>
-                        Data - Base
-                    </p>
-                </div>
-                <div class="tabelaProdutos"></div>
-            </div>
-        </div>
-    </div>
-   </div>
-    <!-- Indicadores -->
-    <div  class="indicadores-carrossel">
-        <span class="indicador ativo"></span>
-        <span class="indicador"></span>
-        <span class="indicador"></span>
     </div>
 </section>
-
 
 
 <section class="destaqueRaio">

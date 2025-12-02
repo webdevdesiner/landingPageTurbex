@@ -218,20 +218,7 @@ body{
 }
 
 
-/* Estilos do Carrossel - Apenas um card visível por vez, em linha única */
-
-.detalhesProdutos
-{
-    display: none;
-}
-
-.carrossel-produtos {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 48px 0;
-}
+/* CSS antigo do carrossel removido - substituído por produtos-grid */
 .carrossel-produtos h2 {
     text-align: center;
     margin-bottom: 24px;
@@ -404,8 +391,6 @@ body{
 .indicador.ativo {
     background: #3a3a3a;
 }
-
-/* aqui encerra o carrossel de produtos */
 
 /* aqui esta a imagem desfilada em tiras - nigth training */
 .imgNigth
@@ -826,7 +811,261 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
     color: #bbb;
   }
 
+/* =========================================== */
+/* SEÇÃO DE PRODUTOS PREMIUM - GRID SYSTEM */
+/* =========================================== */
 
+.produtos-section {
+    width: 100%;
+    padding: 4rem 1rem;
+    margin: 2rem 0;
+}
 
+.produtos-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
+.produtos-titulo {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Grid System - Desktop: 3 colunas, Mobile: 1 coluna */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Card de Produto Premium */
+.produto-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    border: 1px solid #333;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.produto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    border-color: #555;
+}
+
+/* Container da Imagem */
+.produto-imagem-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.produto-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    filter: drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.6));
+}
+
+.produto-imagem.img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.produto-card:hover .produto-imagem:first-child {
+    opacity: 0;
+}
+
+.produto-card:hover .produto-imagem.img-hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Informações do Produto */
+.produto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-grow: 1;
+}
+
+.produto-categoria {
+    font-size: 0.85rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.produto-nome {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.produto-descricao-curta {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Accordion de Detalhes - Estilo transferido do botão "Eu Quero" */
+.produto-accordion {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.accordion-item {
+    border-bottom: none;
+    padding: 0;
+}
+
+.accordion-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 1rem;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #EBC447, #d5a001);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(235, 196, 71, 0.3);
+}
+
+.accordion-trigger:hover {
+    background: linear-gradient(135deg, #d5a001, #EBC447);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(235, 196, 71, 0.5);
+}
+
+.accordion-trigger:active {
+    transform: translateY(0);
+}
+
+.accordion-trigger:focus-visible {
+    outline: 2px solid rgba(235, 196, 71, 0.5);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+.accordion-trigger span:first-child {
+    text-align: left;
+    flex: 1;
+}
+
+.chevron {
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.accordion-item.active .chevron {
+    transform: rotate(135deg);
+    border-color: #000;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+    opacity: 0;
+    color: #ccc;
+    line-height: 1.6;
+    padding: 0;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 1rem 0 1.5rem;
+    opacity: 1;
+}
+
+/* Detalhes do Produto */
+.produto-detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detalhe-secao h4 {
+    color: #EBC447;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.detalhe-secao p {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Tabela Nutricional */
+.tabela-nutricional {
+    overflow-x: auto;
+    margin-top: 0.5rem;
+}
+
+.tabela-nutricional table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.tabela-nutricional th,
+.tabela-nutricional td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.tabela-nutricional th {
+    color: #EBC447;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.tabela-nutricional tr:last-child td {
+    border-bottom: none;
+}
 

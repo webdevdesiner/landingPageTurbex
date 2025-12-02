@@ -75,7 +75,7 @@ function animarScroll(id) {
 // Chama a função para cada ID
 animarScroll("#animar-historia");
 animarScroll("#animar-compromisso");
-animarScroll("#animar-carrossel");
+animarScroll("#produtos");
 
 // Também anima a imagem dentro da div .imgNigth
 gsap.from(".imgNigth img", {

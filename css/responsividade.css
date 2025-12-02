@@ -158,120 +158,71 @@
     margin-bottom: 10vh;
 }
 
-/* cards e descrições desk */
+/* =========================================== */
+/* RESPONSIVIDADE - SEÇÃO DE PRODUTOS PREMIUM */
+/* =========================================== */
 
-.carrossel-produtos .card-produto h3,
-.carrossel-produtos .card-produto p {
-  display: block;
-  text-align: center;
-  margin-bottom: 12px;
+/* Desktop: 3 colunas */
+@media (min-width: 992px) {
+  .produtos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .produto-card {
+    padding: 2rem;
+  }
+
+  .produto-imagem-container {
+    height: 320px;
+  }
+
+  .produto-nome {
+    font-size: 1.75rem;
+  }
 }
 
-.card-descricao
-{
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-  max-width: 200vh;
-  height: 70vh;
-  gap: 20px;
-  
+/* Tablet: 2 colunas */
+@media (min-width: 768px) and (max-width: 991px) {
+  .produtos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .produto-imagem-container {
+    height: 300px;
+  }
 }
 
-.carrossel-cards
-{
-  flex: 1;
-}
+/* Mobile: Carrossel Horizontal */
+@media (max-width: 768px) {
+  .produtos-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE e Edge */
+    padding: 0 1rem;
+    margin: 0 -1rem;
+  }
 
-.card-produto
-{
-  max-width: 100%;   /* Nunca passa do limite do container */
-  height: auto;      /* Mantém a proporção original */
-  display: block;    /* Evita espaços extras em imagens inline */
-}
-.card-produto .produto-accordion {
-  margin-top: 20px;
-}
-.card-produto .accordion-trigger {
-  font-size: 0.95rem;
-}
-.card-produto .accordion-content {
-  font-size: 0.95rem;
-}
+  .produtos-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 
-.detalhesProdutos
-{
-  display: flex;
-    width: 80%;
-    background-color: rgba(255, 255, 255, 0.62);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.95);
-    justify-content: center;
-    align-items: center;
-}
+  .produto-card {
+    min-width: 85vw;
+    max-width: 85vw;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
 
-
-
-
-/* Area de Descriçao dos card - secundario Desk */
-
-.areaDetalhesProdutos
-{
-  width: 90%;
-  height: 90%;
-
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-  /* background-color: pink; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
-}
-
-
-
-.tituloProdutos
-{
-  width: 100%;
-  /* background-color: green; */
-  text-align: center;
-}
-
-.tabelaDescricao
-{
-  display: flex;
-  width: 100%;
-  height: 100%;
-  /* background-color: black; */
-}
-.descicaoProduto
-{
-    padding-right: 20px;
-    overflow-wrap: break-word;
-    overflow: hidden;         /* Esconde o que passar */
-  text-overflow: ellipsis;  /* Mostra "..." no final */
-    /* background-color: yellow; */
-}
-
-.descicaoProduto
-{
-  flex: 1;
-  padding-top: 5%;
-  height: 90%;
-  text-align: justify;
-  /* background-color: orange; */
-}
-
-.tabelaProdutos
-{
-  flex: 1;
-  height: 90%;
-  /* background-color: orangered; */
-  background-image: url(../image/Nigth/tabelaNigth.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  .produto-imagem-container {
+    height: 250px;
+  }
 }
 
 /* .tabelaProdutos image-rendering: 
