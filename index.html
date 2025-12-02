@@ -153,170 +153,390 @@
     <div style="width: 100vw; height: 2px; background: linear-gradient(to right, #919191, #ffffff, #ffffff); border: none; margin: 32px 0 0 0; padding: 0;"></div>
 
 
-<!-- Seção de Produtos Premium -->
+<!-- Seção de Produtos Premium - Layout Estilo Netflix -->
 <section id="produtos" class="produtos-section">
     <div class="produtos-container">
         <h2 class="produtos-titulo">Nossos Produtos</h2>
         
-        <div class="produtos-grid">
-            <!-- Card Creatina -->
-            <div class="produto-card">
-                <div class="produto-imagem-container">
-                    <img src="./image/produto1.png" alt="Creatina Turbex" class="produto-imagem">
-                    <img src="./image/produto1.png" alt="Creatina Turbex" class="produto-imagem img-hover">
-                </div>
-                <div class="produto-info">
-                    <span class="produto-categoria">Aminoácido</span>
-                    <h3 class="produto-nome">Creatina Monohidratada</h3>
-                    <p class="produto-descricao-curta">Aumenta força, explosão e energia para superar limites nos treinos mais intensos.</p>
-                </div>
-                <div class="produto-accordion" data-accordion>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" aria-expanded="false">
-                            <span>Ver Detalhes</span>
-                            <span class="chevron"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="produto-detalhes">
-                                <div class="detalhe-secao">
-                                    <h4>Tabela Nutricional</h4>
-                                    <div class="tabela-nutricional">
-                                        <table>
-                                            <tr>
-                                                <th>Informação Nutricional</th>
-                                                <th>Porção (5g)</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Valor Energético</td>
-                                                <td>0 kcal</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Creatina Monohidratada</td>
-                                                <td>5g</td>
-                                            </tr>
-                                        </table>
+        <!-- Categoria: Creatinas -->
+        <div class="categoria-produtos">
+            <h3 class="categoria-titulo">Linha Creatina</h3>
+            <div class="produtos-row-wrapper">
+                <button class="btn-nav btn-nav-prev" data-target="creatinas" aria-label="Produtos anteriores">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="produtos-row" data-categoria="creatinas">
+                <!-- 1. Creatina Monohidratada (Pote 300g) -->
+                <div class="produto-card">
+                    <div class="produto-imagem-container">
+                        <img src="./image/produto1.png" alt="Creatina Monohidratada 300g" class="produto-imagem">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Creatina Monohidratada</h3>
+                        <p class="produto-subtitulo">Pote 300g</p>
+                    </div>
+                    <div class="produto-accordion" data-accordion>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false">
+                                <span>Ver Detalhes</span>
+                                <span class="chevron"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="produto-detalhes">
+                                    <div class="detalhe-secao">
+                                        <h4>Tabela Nutricional</h4>
+                                        <div class="tabela-nutricional">
+                                            <table>
+                                                <tr><th>Informação Nutricional</th><th>Porção (5g)</th></tr>
+                                                <tr><td>Valor Energético</td><td>0 kcal</td></tr>
+                                                <tr><td>Creatina Monohidratada</td><td>5g</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="detalhe-secao">
+                                        <h4>Modo de Uso</h4>
+                                        <p>Diluir 1 dose (5g) em 200ml de água ou bebida de sua preferência. Consumir preferencialmente após o treino ou conforme orientação de nutricionista ou médico.</p>
                                     </div>
                                 </div>
-                                <div class="detalhe-secao">
-                                    <h4>Modo de Uso</h4>
-                                    <p>Diluir 1 dose (5g) em 200ml de água ou bebida de sua preferência. Consumir preferencialmente após o treino ou conforme orientação de nutricionista ou médico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Creatina Monohidratada (Refil) -->
+                <div class="produto-card">
+                    <div class="produto-imagem-container">
+                        <img src="./image/produto1.png" alt="Creatina Monohidratada Refil" class="produto-imagem">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Creatina Monohidratada</h3>
+                        <p class="produto-subtitulo">Refil</p>
+                    </div>
+                    <div class="produto-accordion" data-accordion>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false">
+                                <span>Ver Detalhes</span>
+                                <span class="chevron"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="produto-detalhes">
+                                    <div class="detalhe-secao">
+                                        <h4>Tabela Nutricional</h4>
+                                        <div class="tabela-nutricional">
+                                            <table>
+                                                <tr><th>Informação Nutricional</th><th>Porção (5g)</th></tr>
+                                                <tr><td>Valor Energético</td><td>0 kcal</td></tr>
+                                                <tr><td>Creatina Monohidratada</td><td>5g</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="detalhe-secao">
+                                        <h4>Modo de Uso</h4>
+                                        <p>Diluir 1 dose (5g) em 200ml de água. Versão refil para recarga do pote original.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Creatina Turbo (com Carbo) -->
+                <div class="produto-card">
+                    <div class="produto-imagem-container">
+                        <img src="./image/produto1.png" alt="Creatina Turbo" class="produto-imagem">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Creatina Turbo</h3>
+                        <p class="produto-subtitulo">Com Carboidratos</p>
+                    </div>
+                    <div class="produto-accordion" data-accordion>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false">
+                                <span>Ver Detalhes</span>
+                                <span class="chevron"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="produto-detalhes">
+                                    <div class="detalhe-secao">
+                                        <h4>Tabela Nutricional</h4>
+                                        <div class="tabela-nutricional">
+                                            <table>
+                                                <tr><th>Informação Nutricional</th><th>Porção (10g)</th></tr>
+                                                <tr><td>Valor Energético</td><td>40 kcal</td></tr>
+                                                <tr><td>Creatina Monohidratada</td><td>5g</td></tr>
+                                                <tr><td>Carboidratos</td><td>8g</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="detalhe-secao">
+                                        <h4>Modo de Uso</h4>
+                                        <p>Diluir 1 dose (10g) em 200ml de água. A combinação com carboidratos potencializa a absorção da creatina.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Creatina Mastigável (Blister) -->
+                <div class="produto-card">
+                    <div class="produto-imagem-container">
+                        <img src="./image/Mastigavel.png" alt="Creatina Mastigável" class="produto-imagem">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Creatina Mastigável</h3>
+                        <p class="produto-subtitulo">Blister - Sabor Frutas Negras</p>
+                    </div>
+                    <div class="produto-accordion" data-accordion>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false">
+                                <span>Ver Detalhes</span>
+                                <span class="chevron"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="produto-detalhes">
+                                    <div class="detalhe-secao">
+                                        <h4>Tabela Nutricional</h4>
+                                        <div class="tabela-nutricional">
+                                            <table>
+                                                <tr><th>Informação Nutricional</th><th>Porção (2 pastilhas)</th></tr>
+                                                <tr><td>Valor Energético</td><td>8 kcal</td></tr>
+                                                <tr><td>Creatina Monohidratada</td><td>3g</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="detalhe-secao">
+                                        <h4>Modo de Uso</h4>
+                                        <p>Mastigar 2 pastilhas após o treino. Praticidade e sabor em formato mastigável.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Creatina Premium (Selo Creapure) -->
+                <div class="produto-card">
+                    <div class="produto-imagem-container">
+                        <img src="./image/produto1.png" alt="Creatina Premium Creapure" class="produto-imagem">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Creatina Premium</h3>
+                        <p class="produto-subtitulo">Selo Creapure®</p>
+                    </div>
+                    <div class="produto-accordion" data-accordion>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false">
+                                <span>Ver Detalhes</span>
+                                <span class="chevron"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="produto-detalhes">
+                                    <div class="detalhe-secao">
+                                        <h4>Tabela Nutricional</h4>
+                                        <div class="tabela-nutricional">
+                                            <table>
+                                                <tr><th>Informação Nutricional</th><th>Porção (5g)</th></tr>
+                                                <tr><td>Valor Energético</td><td>0 kcal</td></tr>
+                                                <tr><td>Creatina Creapure®</td><td>5g</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="detalhe-secao">
+                                        <h4>Modo de Uso</h4>
+                                        <p>Diluir 1 dose (5g) em 200ml de água. Máxima pureza e qualidade com selo Creapure®.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+                <button class="btn-nav btn-nav-next" data-target="creatinas" aria-label="Próximos produtos">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
 
-            <!-- Card Pré-Treino -->
-            <div class="produto-card">
-                <div class="produto-imagem-container">
-                    <img src="./image/Nigth/produto2.png" alt="Pré-Treino Night Training" class="produto-imagem">
-                    <img src="./image/Nigth/produto2.png" alt="Pré-Treino Night Training" class="produto-imagem img-hover">
-                </div>
-                <div class="produto-info">
-                    <span class="produto-categoria">Pré-Treino</span>
-                    <h3 class="produto-nome">Night Training</h3>
-                    <p class="produto-descricao-curta">Energia e resistência durante os treinos. Suplemento em pastilhas mastigáveis.</p>
-                </div>
-                <div class="produto-accordion" data-accordion>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" aria-expanded="false">
-                            <span>Ver Detalhes</span>
-                            <span class="chevron"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="produto-detalhes">
-                                <div class="detalhe-secao">
-                                    <h4>Tabela Nutricional</h4>
-                                    <div class="tabela-nutricional">
-                                        <table>
-                                            <tr>
-                                                <th>Informação Nutricional</th>
-                                                <th>Porção (2 pastilhas)</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Valor Energético</td>
-                                                <td>8 kcal</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cafeína</td>
-                                                <td>200mg</td>
-                                            </tr>
-                                        </table>
+        <!-- Categoria: Pré-Treino -->
+        <div class="categoria-produtos">
+            <h3 class="categoria-titulo">Linha Pré-Treino</h3>
+            <div class="produtos-row-wrapper">
+                <button class="btn-nav btn-nav-prev" data-target="pre-treino" aria-label="Produtos anteriores">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="produtos-row" data-categoria="pre-treino">
+                <!-- 6. Pré-Treino Night Training (Sem cafeína) -->
+                <div class="produto-card">
+                    <div class="produto-imagem-container">
+                        <img src="./image/Nigth/produto2.png" alt="Pré-Treino Night Training" class="produto-imagem">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Night Training</h3>
+                        <p class="produto-subtitulo">Sem Cafeína</p>
+                    </div>
+                    <div class="produto-accordion" data-accordion>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false">
+                                <span>Ver Detalhes</span>
+                                <span class="chevron"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="produto-detalhes">
+                                    <div class="detalhe-secao">
+                                        <h4>Tabela Nutricional</h4>
+                                        <div class="tabela-nutricional">
+                                            <table>
+                                                <tr><th>Informação Nutricional</th><th>Porção (2 pastilhas)</th></tr>
+                                                <tr><td>Valor Energético</td><td>8 kcal</td></tr>
+                                                <tr><td>Beta-Alanina</td><td>1.6g</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="detalhe-secao">
+                                        <h4>Modo de Uso</h4>
+                                        <p>Mastigar 2 pastilhas 30 minutos antes do treino. Ideal para treinos noturnos sem interferir no sono.</p>
                                     </div>
                                 </div>
-                                <div class="detalhe-secao">
-                                    <h4>Modo de Uso</h4>
-                                    <p>Mastigar 2 pastilhas 30 minutos antes do treino. Não exceder 4 pastilhas por dia. Não consumir próximo ao horário de dormir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Pré-Treino Pro (Com cafeína) -->
+                <div class="produto-card">
+                    <div class="produto-imagem-container">
+                        <img src="./image/Nigth/produto2.png" alt="Pré-Treino Pro" class="produto-imagem">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Pré-Treino Pro</h3>
+                        <p class="produto-subtitulo">Com Cafeína</p>
+                    </div>
+                    <div class="produto-accordion" data-accordion>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false">
+                                <span>Ver Detalhes</span>
+                                <span class="chevron"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="produto-detalhes">
+                                    <div class="detalhe-secao">
+                                        <h4>Tabela Nutricional</h4>
+                                        <div class="tabela-nutricional">
+                                            <table>
+                                                <tr><th>Informação Nutricional</th><th>Porção (1 dose)</th></tr>
+                                                <tr><td>Valor Energético</td><td>15 kcal</td></tr>
+                                                <tr><td>Cafeína</td><td>200mg</td></tr>
+                                                <tr><td>Beta-Alanina</td><td>2g</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="detalhe-secao">
+                                        <h4>Modo de Uso</h4>
+                                        <p>Diluir 1 dose em 200ml de água 30 minutos antes do treino. Não exceder 2 doses por dia.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+                <button class="btn-nav btn-nav-next" data-target="pre-treino" aria-label="Próximos produtos">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
 
-            <!-- Card Glutamina -->
-            <div class="produto-card">
-                <div class="produto-imagem-container">
-                    <img src="./image/glutamina/Glutamina.png" alt="Glutamina Turbex" class="produto-imagem">
-                    <img src="./image/glutamina/Glutamina.png" alt="Glutamina Turbex" class="produto-imagem img-hover">
-                </div>
-                <div class="produto-info">
-                    <span class="produto-categoria">Aminoácido</span>
-                    <h3 class="produto-nome">Glutamina</h3>
-                    <p class="produto-descricao-curta">Auxilia na recuperação muscular e fortalece o sistema imunológico.</p>
-                </div>
-                <div class="produto-accordion" data-accordion>
-                    <div class="accordion-item">
-                        <button class="accordion-trigger" aria-expanded="false">
-                            <span>Ver Detalhes</span>
-                            <span class="chevron"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="produto-detalhes">
-                                <div class="detalhe-secao">
-                                    <h4>Tabela Nutricional</h4>
-                                    <div class="tabela-nutricional">
-                                        <table>
-                                            <tr>
-                                                <th>Informação Nutricional</th>
-                                                <th>Porção (5g)</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Valor Energético</td>
-                                                <td>0 kcal</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Glutamina</td>
-                                                <td>5g</td>
-                                            </tr>
-                                        </table>
+        <!-- Categoria: Essenciais -->
+        <div class="categoria-produtos">
+            <h3 class="categoria-titulo">Essenciais</h3>
+            <div class="produtos-row-wrapper">
+                <button class="btn-nav btn-nav-prev" data-target="essenciais" aria-label="Produtos anteriores">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="produtos-row" data-categoria="essenciais">
+                <!-- 8. Glutamina Isolada -->
+                <div class="produto-card">
+                    <div class="produto-imagem-container">
+                        <img src="./image/glutamina/Glutamina.png" alt="Glutamina Isolada" class="produto-imagem">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Glutamina Isolada</h3>
+                        <p class="produto-subtitulo">Recuperação Muscular</p>
+                    </div>
+                    <div class="produto-accordion" data-accordion>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false">
+                                <span>Ver Detalhes</span>
+                                <span class="chevron"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="produto-detalhes">
+                                    <div class="detalhe-secao">
+                                        <h4>Tabela Nutricional</h4>
+                                        <div class="tabela-nutricional">
+                                            <table>
+                                                <tr><th>Informação Nutricional</th><th>Porção (5g)</th></tr>
+                                                <tr><td>Valor Energético</td><td>0 kcal</td></tr>
+                                                <tr><td>Glutamina</td><td>5g</td></tr>
+                                            </table>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="detalhe-secao">
-                                    <h4>Modo de Uso</h4>
-                                    <p>Diluir 1 dose (5g) em 200ml de água. Consumir após o treino ou antes de dormir. Consulte um nutricionista ou médico para orientação personalizada.</p>
+                                    <div class="detalhe-secao">
+                                        <h4>Modo de Uso</h4>
+                                        <p>Diluir 1 dose (5g) em 200ml de água. Consumir após o treino ou antes de dormir para melhor recuperação.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 9. Cafeína Anidra (Caps) -->
+                <div class="produto-card">
+                    <div class="produto-imagem-container">
+                        <img src="./image/produto1.png" alt="Cafeína Anidra" class="produto-imagem">
+                    </div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Cafeína Anidra</h3>
+                        <p class="produto-subtitulo">Cápsulas</p>
+                    </div>
+                    <div class="produto-accordion" data-accordion>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false">
+                                <span>Ver Detalhes</span>
+                                <span class="chevron"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="produto-detalhes">
+                                    <div class="detalhe-secao">
+                                        <h4>Tabela Nutricional</h4>
+                                        <div class="tabela-nutricional">
+                                            <table>
+                                                <tr><th>Informação Nutricional</th><th>Porção (1 cápsula)</th></tr>
+                                                <tr><td>Valor Energético</td><td>0 kcal</td></tr>
+                                                <tr><td>Cafeína Anidra</td><td>200mg</td></tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="detalhe-secao">
+                                        <h4>Modo de Uso</h4>
+                                        <p>Ingerir 1 cápsula 30-60 minutos antes do treino ou quando precisar de energia. Não exceder 3 cápsulas por dia.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <button class="btn-nav btn-nav-next" data-target="essenciais" aria-label="Próximos produtos">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </div>
 </section>
 
-
-<section class="destaqueRaio">
-    <header class="textoDestaqueRaio">
-        <h3>Creatina Mastigável</h3>
-        <h5>Suplemento Alimentar em Pastilhas Mastigáveis - sabor Frutas Negras</h5>
-    </header>
-    <figure class="imgRaio"></figure>
-    <p class="textoDestaqueRaio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt laboriosam nam ad omnis molestiae. Aperiam aliquam, voluptatum ut inventore optio nulla soluta sit eum praesentium, architecto blanditiis perferendis ullam minima.</p>
-    <figure class="tabelaNutricional"></figure>
-    
-</section>
 
 <section class="testimonials-section">
     <div class="background-overlay">

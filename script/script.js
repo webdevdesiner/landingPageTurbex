@@ -1,6 +1,73 @@
 // Código antigo do carrossel removido - substituído por grid de produtos
 // Os accordions são gerenciados pelo script no final do index.html
 
+// Navegação dos carrosséis de produtos
+document.addEventListener('DOMContentLoaded', function() {
+    const botoesNav = document.querySelectorAll('.btn-nav');
+    
+    botoesNav.forEach(botao => {
+        botao.addEventListener('click', function() {
+            const target = this.getAttribute('data-target');
+            const produtosRow = document.querySelector(`.produtos-row[data-categoria="${target}"]`);
+            
+            if (!produtosRow) return;
+            
+            const cardWidth = produtosRow.querySelector('.produto-card').offsetWidth;
+            const gap = 20;
+            const scrollAmount = cardWidth + gap;
+            
+            if (this.classList.contains('btn-nav-prev')) {
+                produtosRow.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            } else if (this.classList.contains('btn-nav-next')) {
+                produtosRow.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Mostrar/ocultar botões baseado na posição do scroll
+    const produtosRows = document.querySelectorAll('.produtos-row');
+    
+    produtosRows.forEach(row => {
+        const updateButtons = () => {
+            const wrapper = row.closest('.produtos-row-wrapper');
+            if (!wrapper) return;
+            
+            const prevBtn = wrapper.querySelector('.btn-nav-prev');
+            const nextBtn = wrapper.querySelector('.btn-nav-next');
+            
+            if (!prevBtn || !nextBtn) return;
+            
+            // Mostrar botão anterior se não estiver no início
+            if (row.scrollLeft > 0) {
+                prevBtn.style.opacity = '1';
+                prevBtn.style.pointerEvents = 'all';
+            } else {
+                prevBtn.style.opacity = '0';
+                prevBtn.style.pointerEvents = 'none';
+            }
+            
+            // Mostrar botão próximo se não estiver no final
+            const maxScroll = row.scrollWidth - row.clientWidth;
+            if (row.scrollLeft < maxScroll - 10) {
+                nextBtn.style.opacity = '1';
+                nextBtn.style.pointerEvents = 'all';
+            } else {
+                nextBtn.style.opacity = '0';
+                nextBtn.style.pointerEvents = 'none';
+            }
+        };
+        
+        row.addEventListener('scroll', updateButtons);
+        updateButtons(); // Verificar estado inicial
+    });
+});
+
 
 document.querySelectorAll('#menu-eclipse button').forEach(btn => {
     btn.addEventListener('click', function() {

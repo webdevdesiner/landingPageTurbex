@@ -159,18 +159,15 @@
 }
 
 /* =========================================== */
-/* RESPONSIVIDADE - SEÇÃO DE PRODUTOS PREMIUM */
+/* RESPONSIVIDADE - SEÇÃO DE PRODUTOS NETFLIX */
 /* =========================================== */
 
-/* Desktop: 3 colunas */
+/* Desktop: Carrossel Horizontal - 2 produtos visíveis */
 @media (min-width: 992px) {
-  .produtos-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-  }
-
   .produto-card {
     padding: 2rem;
+    width: 600px;
+    min-width: 600px;
   }
 
   .produto-imagem-container {
@@ -182,11 +179,11 @@
   }
 }
 
-/* Tablet: 2 colunas */
-@media (min-width: 768px) and (max-width: 991px) {
-  .produtos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+/* Tablet: Carrossel Horizontal */
+@media (min-width: 769px) and (max-width: 991px) {
+  .produto-card {
+    width: 280px;
+    min-width: 280px;
   }
 
   .produto-imagem-container {
@@ -196,32 +193,31 @@
 
 /* Mobile: Carrossel Horizontal */
 @media (max-width: 768px) {
-  .produtos-grid {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 1rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE e Edge */
-    padding: 0 1rem;
-    margin: 0 -1rem;
+  .categoria-titulo {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
   }
 
-  .produtos-grid::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+  .produtos-row {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .btn-nav {
+    display: none; /* Ocultar botões no mobile - usar swipe */
   }
 
   .produto-card {
+    width: 85vw;
     min-width: 85vw;
-    max-width: 85vw;
-    flex-shrink: 0;
-    scroll-snap-align: center;
+    padding: 1.5rem;
   }
 
   .produto-imagem-container {
     height: 250px;
+  }
+
+  .produto-nome {
+    font-size: 1.25rem;
   }
 }
 

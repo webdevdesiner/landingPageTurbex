@@ -812,7 +812,7 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
   }
 
 /* =========================================== */
-/* SEÇÃO DE PRODUTOS PREMIUM - GRID SYSTEM */
+/* SEÇÃO DE PRODUTOS PREMIUM - LAYOUT NETFLIX */
 /* =========================================== */
 
 .produtos-section {
@@ -837,12 +837,92 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
     letter-spacing: 0.05em;
 }
 
-/* Grid System - Desktop: 3 colunas, Mobile: 1 coluna */
-.produtos-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: start;
+/* Container de Categoria */
+.categoria-produtos {
+    margin-bottom: 3rem;
+}
+
+.categoria-titulo {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Wrapper para botões de navegação */
+.produtos-row-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Botões de Navegação */
+.btn-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    pointer-events: all;
+}
+
+.produtos-row-wrapper:hover .btn-nav {
+    opacity: 1;
+}
+
+.btn-nav:hover {
+    background: rgba(0, 0, 0, 0.9);
+    border-color: #EBC447;
+    color: #EBC447;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.btn-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.btn-nav-prev {
+    left: 10px;
+}
+
+.btn-nav-next {
+    right: 10px;
+}
+
+/* Linha de Produtos - Carrossel Horizontal Infinito (Estilo Netflix) */
+.produtos-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 0 3rem 1rem 3rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE e Edge */
+    flex: 1;
+}
+
+.produtos-row::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 /* Card de Produto Premium */
@@ -853,8 +933,12 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    flex: 0 0 auto;
+    width: 300px;
+    min-width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    scroll-snap-align: center;
 }
 
 .produto-card:hover {
@@ -925,11 +1009,12 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.produto-descricao-curta {
-    font-size: 0.95rem;
-    color: #ccc;
-    line-height: 1.6;
-    margin: 0;
+.produto-subtitulo {
+    font-size: 0.9rem;
+    color: #999;
+    line-height: 1.5;
+    margin: 0.5rem 0 0 0;
+    font-style: italic;
 }
 
 /* Accordion de Detalhes - Estilo transferido do botão "Eu Quero" */
