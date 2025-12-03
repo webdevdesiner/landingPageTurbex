@@ -965,23 +965,11 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease;
     filter: drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.6));
 }
 
-.produto-imagem.img-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-}
-
-.produto-card:hover .produto-imagem:first-child {
-    opacity: 0;
-}
-
-.produto-card:hover .produto-imagem.img-hover {
-    opacity: 1;
+.produto-card:hover .produto-imagem {
     transform: scale(1.05);
 }
 
@@ -1015,6 +1003,14 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
     line-height: 1.5;
     margin: 0.5rem 0 0 0;
     font-style: italic;
+}
+
+.produto-descricao-curta {
+    font-size: 1rem;
+    color: #999;
+    line-height: 1.5;
+    margin: 0.5rem 0 0 0;
+    /* font-style: italic; */
 }
 
 /* Accordion de Detalhes - Estilo transferido do botão "Eu Quero" */
@@ -1152,5 +1148,56 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
 
 .tabela-nutricional tr:last-child td {
     border-bottom: none;
+}
+
+/* Lista de Benefícios */
+.lista-beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+.lista-beneficios li {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.lista-beneficios li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #EBC447;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Nota da Tabela */
+.nota-tabela {
+    font-size: 0.75rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+/* Aviso Legal */
+.aviso-legal {
+    font-size: 0.85rem;
+    color: #EBC447;
+    font-weight: 600;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+}
+
+/* Texto de Ingredientes */
+.texto-ingredientes {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
 }
 
