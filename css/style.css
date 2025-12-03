@@ -1201,3 +1201,59 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
     margin: 0;
 }
 
+/* ============================= */
+/* SLIDESHOW AUTOMÁTICO PRODUTOS */
+/* ============================= */
+
+/* Container relativo para segurar as imagens absolutas */
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+    /* Garante que o container tenha a altura do design do card (ajuste se necessário) */
+    height: 300px; 
+    width: 100%;
+}
+
+/* Estilo base para todas as imagens do slide */
+.img-slide {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    width: auto;
+    height: 100%; /* Ocupa toda a altura do container */
+    object-fit: contain; /* Garante que a imagem não distorça */
+    opacity: 0; /* Começam invisíveis */
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; /* Permite clicar no container pai */
+}
+
+/* A primeira imagem é visível por padrão quando não há interação */
+.img-slide.slide-1 {
+    opacity: 1;
+    z-index: 10;
+}
+
+/* KEYFRAMES PARA O LOOP (Total 9 segundos: 3s visível + transições) */
+@keyframes slideshowFade {
+    0% { opacity: 0; z-index: 1; }
+    5%, 33.33% { opacity: 1; z-index: 20; } /* Aparece rápido e fica */
+    38.33%, 100% { opacity: 0; z-index: 1; } /* Some e fica invisível */
+}
+
+/* LÓGICA DE ATIVAÇÃO (Hover Desktop OU Classe .active no Mobile) */
+/* Slide 1 */
+.produto-card:hover .slide-1, .slideshow-container.active .slide-1 {
+    animation: slideshowFade 9s infinite;
+    animation-delay: 0s;
+}
+/* Slide 2 (Começa após 3s) */
+.produto-card:hover .slide-2, .slideshow-container.active .slide-2 {
+    animation: slideshowFade 9s infinite;
+    animation-delay: 3s;
+}
+/* Slide 3 (Começa após 6s) */
+.produto-card:hover .slide-3, .slideshow-container.active .slide-3 {
+    animation: slideshowFade 9s infinite;
+    animation-delay: 6s;
+}
