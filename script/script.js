@@ -80,4 +80,35 @@ document.querySelectorAll('#menu-eclipse button').forEach(btn => {
       }
     });
   });
+
+// Controle de pause do slideshow
+document.addEventListener('DOMContentLoaded', function() {
+    const slideshowContainers = document.querySelectorAll('.slideshow-container');
+    
+    slideshowContainers.forEach(container => {
+        const produtoCard = container.closest('.produto-card');
+        
+        // Toggle pause ao clicar na imagem
+        container.addEventListener('click', function(e) {
+            e.stopPropagation();
+            // Toggle pause
+            this.classList.toggle('paused');
+            // Ativa o slideshow se não estiver ativo (para mobile)
+            if (!this.classList.contains('active')) {
+                this.classList.add('active');
+            }
+        });
+        
+        // Reset ao sair do hover do card (remove pause e active)
+        if (produtoCard) {
+            produtoCard.addEventListener('mouseleave', function() {
+                const slideshow = this.querySelector('.slideshow-container');
+                if (slideshow) {
+                    slideshow.classList.remove('paused');
+                    slideshow.classList.remove('active');
+                }
+            });
+        }
+    });
+});
   

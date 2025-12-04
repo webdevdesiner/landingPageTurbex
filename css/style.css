@@ -1234,26 +1234,33 @@ style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 4
     z-index: 10;
 }
 
-/* KEYFRAMES PARA O LOOP (Total 9 segundos: 3s visível + transições) */
+/* KEYFRAMES PARA O LOOP (Total 6 segundos: 2s visível + transições) */
 @keyframes slideshowFade {
     0% { opacity: 0; z-index: 1; }
-    5%, 33.33% { opacity: 1; z-index: 20; } /* Aparece rápido e fica */
-    38.33%, 100% { opacity: 0; z-index: 1; } /* Some e fica invisível */
+    8.33%, 33.33% { opacity: 1; z-index: 20; } /* Aparece rápido e fica */
+    41.67%, 100% { opacity: 0; z-index: 1; } /* Some e fica invisível */
 }
 
 /* LÓGICA DE ATIVAÇÃO (Hover Desktop OU Classe .active no Mobile) */
 /* Slide 1 */
 .produto-card:hover .slide-1, .slideshow-container.active .slide-1 {
-    animation: slideshowFade 9s infinite;
+    animation: slideshowFade 6s infinite;
     animation-delay: 0s;
 }
-/* Slide 2 (Começa após 3s) */
+/* Slide 2 (Começa após 2s) */
 .produto-card:hover .slide-2, .slideshow-container.active .slide-2 {
-    animation: slideshowFade 9s infinite;
-    animation-delay: 3s;
+    animation: slideshowFade 6s infinite;
+    animation-delay: 2s;
 }
-/* Slide 3 (Começa após 6s) */
+/* Slide 3 (Começa após 4s) */
 .produto-card:hover .slide-3, .slideshow-container.active .slide-3 {
-    animation: slideshowFade 9s infinite;
-    animation-delay: 6s;
+    animation: slideshowFade 6s infinite;
+    animation-delay: 4s;
+}
+
+/* PAUSAR ANIMAÇÃO QUANDO CLICAR */
+.slideshow-container.paused .slide-1,
+.slideshow-container.paused .slide-2,
+.slideshow-container.paused .slide-3 {
+    animation-play-state: paused;
 }
