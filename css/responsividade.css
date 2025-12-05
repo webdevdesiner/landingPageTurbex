@@ -21,18 +21,18 @@
         display: flex !important; /* Garante que o container da logo branca seja exibido */
         align-items: center;
         justify-content: center;
-        width: 250px; /* Aumentado para acomodar logo maior */
+        width: 350px; /* Aumentado para acomodar logo maior */
         height: 150px; /* Aumentado para acomodar logo maior */
     }
     .logoBranca img {
         margin-left: 50px;
-        margin-top: 50vh;
+        margin-top: 60vh;
         z-index: 1000;
         width: 100%;
         height: auto;
         background-size: cover;
         display: block;
-        max-width: 150px; /* Aumentado para logo maior */
+        max-width: 250px; /* Aumentado para logo maior */
         max-height: 150px; /* Aumentado para logo maior */
         object-fit: contain;
         /* background-color: orange; */
@@ -74,7 +74,10 @@
     #produto-rotativo {
       max-width: 100vw; /* Largura máxima igual à viewport */
       max-height: 100vh; /* Altura máxima igual à viewport */
+      min-height: 70vh !important; /* Altura mínima para garantir tamanho consistente */
+      min-width: 400px !important; /* Largura mínima para garantir tamanho consistente */
       object-fit: contain; /* Garante que a imagem seja totalmente visível sem distorção */
+      object-position: center bottom; /* Posiciona a imagem no centro e na parte inferior */
       transition: opacity 0.7s; /* Suaviza a transição de opacidade */
       position: absolute; /* Posiciona absolutamente dentro do container pai */
       left: 50%; /* Centraliza horizontalmente */
@@ -100,7 +103,7 @@
       align-items: flex-end; /* Alinha os botões à direita */
       justify-content: center; /* Centraliza verticalmente */
       gap: 24px; /* Espaçamento entre os botões */
-      margin-right: 32px; /* Margem à direita para afastar do limite */
+      margin-right: 100px; /* Margem à direita para afastar do limite */
       margin-top: 5vh;
       z-index: 1000; /* Garante que fique acima de outros elementos */
       position: relative; /* Permite posicionamento relativo de elementos filhos */
@@ -191,35 +194,6 @@
   }
 }
 
-/* Mobile: Carrossel Horizontal */
-@media (max-width: 768px) {
-  .categoria-titulo {
-    padding-left: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .produtos-row {
-    padding: 0 1rem 1rem 1rem;
-  }
-
-  .btn-nav {
-    display: none; /* Ocultar botões no mobile - usar swipe */
-  }
-
-  .produto-card {
-    width: 85vw;
-    min-width: 85vw;
-    padding: 1.5rem;
-  }
-
-  .produto-imagem-container {
-    height: 250px;
-  }
-
-  .produto-nome {
-    font-size: 1.25rem;
-  }
-}
 
 /* .tabelaProdutos image-rendering: 
 {
@@ -443,317 +417,16 @@
 }
 
 
-/* Footer Responsivo */
 
-@media (max-width: 768px) {
-  .site-footer {
-    padding: 3rem 0 0 0;
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100vw;
-    box-sizing: border-box;
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Reorganizar footer no mobile: Logo -> Texto -> Navegação -> Ícones */
-  
-  /* Ordem: Logo primeiro */
-  .footer-col.brand-col {
-    order: 1;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-  }
-
-  .footer-logo {
-    max-width: 140px;
-    width: auto;
-    height: auto;
-    margin: 0 auto 1.5rem auto;
-    display: block;
-  }
-
-  /* Texto segundo (copy sobre a Turbex) */
-  .footer-slogan {
-    text-align: center;
-    max-width: 100%;
-    width: 100%;
-    margin: 0 auto 1.5rem auto;
-    padding: 0 0.5rem;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    line-height: 1.6;
-  }
-
-  /* Esconder ícones sociais da brand-col no mobile */
-  .brand-col .social-links {
-    display: none !important;
-  }
-
-  /* Mostrar primeira coluna de navegação e reorganizar */
-  .footer-col.links-col:first-of-type {
-    order: 2;
-    display: block !important;
-    width: 100%;
-    text-align: center;
-  }
-
-  .footer-col.links-col:first-of-type h4 {
-    display: none; /* Esconder título "Navegação" */
-  }
-
-  .footer-col.links-col:first-of-type ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .footer-col.links-col:first-of-type li {
-    margin: 0;
-  }
-
-  .footer-col.links-col:first-of-type a {
-    color: #aeaeae;
-    text-decoration: none;
-    transition: color 0.2s;
-    font-size: 0.9rem;
-  }
-
-  .footer-col.links-col:first-of-type a:hover {
-    color: #FFD700;
-  }
-
-  /* Esconder segunda coluna de links e contato */
-  .footer-col.links-col:last-of-type,
-  .footer-col.contact-col {
-    display: none;
-  }
-
-  /* Mostrar ícones sociais após navegação no mobile */
-  .footer-social-mobile {
-    order: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-
-  .footer-social-mobile .social-links {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .footer-social-mobile .social-links a {
-    margin: 0;
-  }
-
-  /* Botão WhatsApp Flutuante */
-  .btn-whatsapp-float {
-    display: flex;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
-    color: #fff;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-    z-index: 1000;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    animation: pulse-whatsapp 2s infinite;
-  }
-
-  .btn-whatsapp-float:hover {
-    background: #1ebc57;
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-  }
-
-  @keyframes pulse-whatsapp {
-    0% {
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+/* Regras Desktop - Footer */
+@media (min-width: 769px) {
+    .footer-social-mobile {
+        display: none !important;
     }
-    50% {
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);
+    
+    .btn-whatsapp-float {
+        display: none !important;
     }
-    100% {
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-    }
-  }
-
-  .footer-bottom {
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 1.5rem 1rem;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    order: 5;
-    overflow-x: hidden;
-  }
-
-  .copyright,
-  .developer-credit {
-    width: 100%;
-    text-align: center;
-  }
 }
-
-@media (max-width: 480px) {
-  .site-footer {
-    padding: 2.5rem 0 0 0;
-  }
-
-  .footer-container {
-    padding: 0 0.75rem;
-    gap: 1.75rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .footer-slogan {
-    padding: 0 0.25rem;
-    font-size: 0.9rem;
-  }
-
-  .footer-col.links-col:first-of-type ul {
-    gap: 0.5rem 0.75rem;
-  }
-
-  .footer-col.links-col:first-of-type a {
-    font-size: 0.85rem;
-  }
-
-  .footer-logo {
-    max-width: 120px;
-  }
-
-  .footer-slogan {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .social-links {
-    gap: 0.5rem;
-  }
-
-  .social-links a {
-    width: 38px;
-    height: 38px;
-    font-size: 16px;
-  }
-
-  .footer-col h4 {
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-  }
-
-  .links-col ul {
-    gap: 0.6rem;
-  }
-
-  .links-col a {
-    font-size: 0.9rem;
-  }
-
-  .contact-list {
-    gap: 0.8rem;
-  }
-
-  .contact-list li {
-    font-size: 0.9rem;
-  }
-
-  .btn-footer-zap {
-    font-size: 0.85rem;
-    padding: 9px 18px;
-    max-width: 100%;
-  }
-
-  /* Ajustar botão WhatsApp flutuante para telas menores */
-  .btn-whatsapp-float {
-    width: 56px;
-    height: 56px;
-    font-size: 26px;
-    bottom: 15px;
-    right: 15px;
-  }
-
-  .footer-bottom {
-    padding: 1.25rem 1rem;
-    font-size: 0.75rem;
-    gap: 0.5rem;
-  }
-
-  .copyright p,
-  .developer-credit p {
-    font-size: 0.75rem;
-    line-height: 1.4;
-  }
-}
-
-@media (max-width: 360px) {
-  .footer-container {
-    padding: 0 0.75rem;
-    gap: 1.75rem;
-  }
-
-  .social-links a {
-    width: 36px;
-    height: 36px;
-    font-size: 15px;
-  }
-
-  .btn-footer-zap {
-    font-size: 0.8rem;
-    padding: 8px 16px;
-  }
-
-  /* Ajustar botão WhatsApp flutuante para telas muito pequenas */
-  .btn-whatsapp-float {
-    width: 52px;
-    height: 52px;
-    font-size: 24px;
-    bottom: 12px;
-    right: 12px;
-  }
-}
-
-
-
 
   }
