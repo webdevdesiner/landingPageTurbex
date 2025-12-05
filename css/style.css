@@ -136,7 +136,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: end;
-    gap: 24px;
+    gap: 14px;
     margin: 32px 0;
     margin-right: 15px;
 }
@@ -708,108 +708,403 @@ body{
   
 
 
-/* call to action - representantes */
+/* Seção Turbex Business - Representantes (CSS Isolado com #representante) */
 
-.call-action-vendedores
-{
-    display: flex;
-    justify-content: center;
+/* Container Principal Isolado */
+#representante {
+    background-color: #050505;
+    color: #ffffff;
+    padding: 5rem 1rem;
+    border-top: 1px solid #222;
+    position: relative;
+    z-index: 1;
+    margin-top: 4rem; /* Espaço entre Instagram e Representantes */
+}
+
+#representante .biz-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
     align-items: center;
-    flex-direction: column;
-    gap: 20px;
+}
+
+/* Tipografia Específica desta Seção */
+#representante .biz-tag {
+    color: #FFD700;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+#representante .biz-title {
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: #fff; /* Força cor branca para sobrepor globais */
+}
+
+#representante .biz-gold {
+    color: #FFD700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+#representante .biz-text {
+    color: #a0a0a0;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+}
+
+/* Lista Isolada */
+#representante .biz-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem 0;
+}
+
+#representante .biz-list li {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+#representante .biz-icon {
+    color: #000;
+    background: #FFD700;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+#representante .biz-list strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+#representante .biz-list small {
+    display: block;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Botão Específico */
+#representante .biz-btn {
+    display: inline-block;
+    background: #FFD700;
+    color: #000;
+    padding: 18px 36px;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    border: none;
+}
+
+#representante .biz-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+    background: #ffdb1a;
+}
+
+/* Área de Imagem */
+#representante .biz-image-area {
     width: 100%;
-    height: 100vh;
-    text-align: center;
-
-    /* background-color: orange; */
-
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
-
-
-.call-action-vendedores h1{
-    font-family: Impact, 'Arial Narrow Bold', Arial, sans-serif;
-}
-
-.figureCallFooter
-{
-    /* Ajustado para não cortar a imagem e garantir que ela seja totalmente exibida */
-    background-image: url(../image/footer/footer.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; /* Garante que a imagem inteira apareça sem corte */
+#representante .biz-picture {
+    display: block;
     width: 100%;
-    max-width: 600px;
-    height: 220px;
-    min-height: 120px;
-    filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.6)); 
-    /* background-color: pink; */
-
-    margin: 0 auto; 
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
 }
-/* 
-style="background: linear-gradient(90deg, #e0e0e0 60%, #b9b9b9 100%); padding: 40px 0; text-align: center; margin-top: 32px;">
-    <div style="max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #222; font-family: 'Lucida Sans', Arial, sans-serif; margin-bottom: 16px;"
 
-        style="margin-top: 18px; color: #666; font-size: 0.95rem;" */
+#representante .biz-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #333;
+    display: block;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
+}
+
+/* Overlay gradiente dourado no hover */
+#representante .biz-picture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0) 0%, rgba(255, 215, 0, 0.15) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 12px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Efeito de brilho que se move */
+#representante .biz-picture::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 215, 0, 0.1) 50%,
+        transparent 70%
+    );
+    transform: rotate(45deg) translateX(-100%);
+    transition: transform 0.8s ease;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Hover Effects */
+#representante .biz-image-area:hover .biz-image {
+    transform: scale(1.08);
+    border-color: #FFD700;
+    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.4),
+                0 0 40px rgba(255, 215, 0, 0.2);
+}
+
+#representante .biz-image-area:hover .biz-picture::before {
+    opacity: 1;
+}
+
+#representante .biz-image-area:hover .biz-picture::after {
+    transform: rotate(45deg) translateX(100%);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #representante { padding: 3rem 1.5rem; }
+    #representante .biz-container { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+    #representante .biz-title { font-size: 2rem; }
+    #representante .biz-text { margin: 0 auto 2rem auto; }
+    #representante .biz-list li { text-align: left; }
+    #representante .biz-btn { width: 100%; display: block; }
+    #representante .biz-image { height: 300px; }
+}
 
 /* Footer */
 
-.footer {
+/* Footer Premium */
+.site-footer {
+    background-color: #080808;
+    color: #aeaeae;
+    padding: 4rem 0 0 0;
+    border-top: 1px solid #1a1a1a;
+    font-size: 0.95rem;
     width: 100%;
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 24px 16px; 
-    font-family: Arial, sans-serif;
-    font-size: 0.9rem;
-    /* display: flex; */
-  }
-  
-  .footer-logo img {
-    width: 140px;
-    height: auto;
-    margin-bottom: 16px;
-  }
-  
-  .footer-contatos p {
-    margin: 4px 0;
-  }
-  
-  .footer-redes {
-    margin: 16px 0;
-  }
-  
-  .footer-redes a {
-    display: inline-block;
-    margin: 0 8px;
-    font-size: 28px;     /* tamanho do ícone */
-    color: #333;         /* cor padrão */
-    margin: 0 10px;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-redes img {
-    width: 28px;
-    height: 28px;
-    filter: brightness(0) invert(1); /* deixa ícone branco */
-    transition: transform 0.3s;
-  }
-  
-  .footer-redes img:hover {
-    transform: scale(1.2);
-  }
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
 
-  .footer-redes a:hover {
-    color: #EEC343;      /* muda a cor no hover */
-  }
-  
-  .footer-copy {
-    margin-top: 12px;
-    font-size: 0.75rem;
-    color: #bbb;
-  }
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr; /* Layout assimétrico */
+    gap: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Coluna Marca */
+.footer-logo {
+    max-width: 140px;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    filter: drop-shadow(0 4px 8px rgba(255, 215, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+.footer-slogan {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.social-links a {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 215, 0, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.social-links a:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.social-links a:hover {
+    background: #FFD700;
+    color: #000;
+    border-color: #FFD700;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+}
+
+.social-links a i {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover i {
+    transform: scale(1.1);
+}
+
+/* Links Listas */
+.links-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links-col li {
+    margin-bottom: 0.8rem;
+}
+
+.links-col a {
+    color: #aeaeae;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.links-col a:hover {
+    color: #FFD700;
+    padding-left: 5px; /* Efeitozinho de slide */
+}
+
+/* Contato */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.btn-footer-zap {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366; /* Verde Zap */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-footer-zap:hover {
+    background: #1ebc57;
+}
+
+/* Barra Inferior */
+.footer-bottom {
+    background: #000;
+    padding: 1.5rem;
+    border-top: 1px solid #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+}
+
+.copyright p,
+.developer-credit p {
+    margin: 0;
+    color: #666;
+}
 
 /* =========================================== */
 /* SEÇÃO DE PRODUTOS PREMIUM - LAYOUT NETFLIX */
