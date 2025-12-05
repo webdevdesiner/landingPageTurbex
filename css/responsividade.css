@@ -21,8 +21,8 @@
         display: flex !important; /* Garante que o container da logo branca seja exibido */
         align-items: center;
         justify-content: center;
-        width: 180px; /* Ajuste conforme necessário para o tamanho desejado */
-        height: 100px; /* Ajuste conforme necessário para o tamanho desejado */
+        width: 250px; /* Aumentado para acomodar logo maior */
+        height: 150px; /* Aumentado para acomodar logo maior */
     }
     .logoBranca img {
         margin-left: 50px;
@@ -32,8 +32,8 @@
         height: auto;
         background-size: cover;
         display: block;
-        max-width: 80px; /* Garante que a imagem não ultrapasse o container */
-        max-height: 100px;
+        max-width: 150px; /* Aumentado para logo maior */
+        max-height: 150px; /* Aumentado para logo maior */
         object-fit: contain;
         /* background-color: orange; */
     }
