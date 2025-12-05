@@ -32,7 +32,7 @@
         height: auto;
         background-size: cover;
         display: block;
-        max-width: 180px; /* Garante que a imagem não ultrapasse o container */
+        max-width: 80px; /* Garante que a imagem não ultrapasse o container */
         max-height: 100px;
         object-fit: contain;
         /* background-color: orange; */
@@ -448,29 +448,36 @@
 @media (max-width: 768px) {
   .site-footer {
     padding: 3rem 0 0 0;
-    overflow-x: hidden; /* Previne cortes horizontais */
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr; /* Tudo em 1 coluna */
-    gap: 2.5rem;
-    padding: 0 1.5rem;
-    margin-bottom: 2.5rem;
-    text-align: center;
+    overflow-x: hidden;
     width: 100%;
+    max-width: 100vw;
     box-sizing: border-box;
   }
 
-  .footer-col {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Reorganizar footer no mobile: Logo -> Texto -> Navegação -> Ícones */
+  
+  /* Ordem: Logo primeiro */
+  .footer-col.brand-col {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-  }
-
-  .footer-col.brand-col {
-    align-items: center;
+    box-sizing: border-box;
   }
 
   .footer-logo {
@@ -481,78 +488,130 @@
     display: block;
   }
 
+  /* Texto segundo (copy sobre a Turbex) */
   .footer-slogan {
     text-align: center;
     max-width: 100%;
+    width: 100%;
     margin: 0 auto 1.5rem auto;
-    padding: 0;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    line-height: 1.6;
   }
 
-  .social-links { 
+  /* Esconder ícones sociais da brand-col no mobile */
+  .brand-col .social-links {
+    display: none !important;
+  }
+
+  /* Mostrar primeira coluna de navegação e reorganizar */
+  .footer-col.links-col:first-of-type {
+    order: 2;
+    display: block !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-col.links-col:first-of-type h4 {
+    display: none; /* Esconder título "Navegação" */
+  }
+
+  .footer-col.links-col:first-of-type ul {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .social-links a {
+    gap: 1rem 1.5rem;
+    list-style: none;
+    padding: 0;
     margin: 0;
   }
 
-  .footer-col h4 {
-    font-size: 1rem;
-    margin-bottom: 1.25rem;
-    text-align: center;
-    width: 100%;
+  .footer-col.links-col:first-of-type li {
+    margin: 0;
   }
 
-  .links-col ul {
+  .footer-col.links-col:first-of-type a {
+    color: #aeaeae;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.9rem;
+  }
+
+  .footer-col.links-col:first-of-type a:hover {
+    color: #FFD700;
+  }
+
+  /* Esconder segunda coluna de links e contato */
+  .footer-col.links-col:last-of-type,
+  .footer-col.contact-col {
+    display: none;
+  }
+
+  /* Mostrar ícones sociais após navegação no mobile */
+  .footer-social-mobile {
+    order: 3;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 0.75rem;
     width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .footer-social-mobile .social-links {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    margin: 0;
     padding: 0;
   }
 
-  .links-col li {
-    width: auto;
-    text-align: center;
+  .footer-social-mobile .social-links a {
+    margin: 0;
   }
 
-  .links-col a {
-    display: inline-block;
-    text-align: center;
-  }
-
-  .contact-col {
-    align-items: center;
-    width: 100%;
-  }
-
-  .contact-list {
+  /* Botão WhatsApp Flutuante */
+  .btn-whatsapp-float {
     display: flex;
-    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
     align-items: center;
-    gap: 1rem;
-    width: 100%;
-    margin-bottom: 1.5rem;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
   }
 
-  .contact-list li {
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
+  .btn-whatsapp-float:hover {
+    background: #1ebc57;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
   }
 
-  .btn-footer-zap {
-    width: 100%;
-    max-width: 280px;
-    justify-content: center;
-    margin: 0 auto;
+  @keyframes pulse-whatsapp {
+    0% {
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);
+    }
+    100% {
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
   }
 
   .footer-bottom {
@@ -560,9 +619,12 @@
     text-align: center;
     flex-direction: column;
     gap: 0.75rem;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 1rem;
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
+    order: 5;
+    overflow-x: hidden;
   }
 
   .copyright,
@@ -578,9 +640,22 @@
   }
 
   .footer-container {
-    padding: 0 1rem;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    padding: 0 0.75rem;
+    gap: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-slogan {
+    padding: 0 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-col.links-col:first-of-type ul {
+    gap: 0.5rem 0.75rem;
+  }
+
+  .footer-col.links-col:first-of-type a {
+    font-size: 0.85rem;
   }
 
   .footer-logo {
@@ -629,6 +704,15 @@
     max-width: 100%;
   }
 
+  /* Ajustar botão WhatsApp flutuante para telas menores */
+  .btn-whatsapp-float {
+    width: 56px;
+    height: 56px;
+    font-size: 26px;
+    bottom: 15px;
+    right: 15px;
+  }
+
   .footer-bottom {
     padding: 1.25rem 1rem;
     font-size: 0.75rem;
@@ -657,6 +741,15 @@
   .btn-footer-zap {
     font-size: 0.8rem;
     padding: 8px 16px;
+  }
+
+  /* Ajustar botão WhatsApp flutuante para telas muito pequenas */
+  .btn-whatsapp-float {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+    bottom: 12px;
+    right: 12px;
   }
 }
 

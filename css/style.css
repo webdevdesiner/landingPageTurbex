@@ -8,7 +8,7 @@
 /* /O background tera um degrade que ficara alternando enter as paletas (#ff0303 #ffffff )/ */
 body{
     background: linear-gradient(to left,
-    #f8f6d4, #ffffff, #ffffff, #d9d8d8, #a7a6a6, #8a8a8a, #181818);
+    #f8f6d4, #ffffff, #ffffff, #d9d8d8, #a7a6a6, #8a8a8a, #181818, #00132E);
     background-size: 1000% 1000%;
     height: 100vh;
     width: 100vw;
@@ -1087,6 +1087,27 @@ body{
     background: #1ebc57;
 }
 
+/* Esconder ícones sociais mobile e botão flutuante no desktop */
+.footer-social-mobile {
+    display: none;
+}
+
+/* Botão WhatsApp Flutuante (apenas mobile) */
+.btn-whatsapp-float {
+    display: none;
+}
+
+/* Garantir que no desktop tudo fique como está */
+@media (min-width: 769px) {
+    .footer-social-mobile {
+        display: none !important;
+    }
+    
+    .btn-whatsapp-float {
+        display: none !important;
+    }
+}
+
 /* Barra Inferior */
 .footer-bottom {
     background: #000;
@@ -1098,6 +1119,10 @@ body{
     flex-wrap: wrap;
     gap: 1rem;
     font-size: 0.85rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .copyright p,
