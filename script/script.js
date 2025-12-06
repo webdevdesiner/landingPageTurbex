@@ -43,27 +43,62 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (!prevBtn || !nextBtn) return;
             
+            const maxScroll = row.scrollWidth - row.clientWidth;
+            const isMobile = window.innerWidth <= 768;
+            
             // Mostrar botão anterior se não estiver no início
-            if (row.scrollLeft > 0) {
-                prevBtn.style.opacity = '1';
-                prevBtn.style.pointerEvents = 'all';
+            if (row.scrollLeft > 10) {
+                if (isMobile) {
+                    prevBtn.style.opacity = '1';
+                    prevBtn.style.pointerEvents = 'all';
+                } else {
+                    prevBtn.style.opacity = '1';
+                    prevBtn.style.pointerEvents = 'all';
+                }
             } else {
-                prevBtn.style.opacity = '0';
-                prevBtn.style.pointerEvents = 'none';
+                if (isMobile) {
+                    prevBtn.style.opacity = '0.5'; // Mais visível no mobile mesmo no início
+                    prevBtn.style.pointerEvents = 'all';
+                } else {
+                    prevBtn.style.opacity = '0';
+                    prevBtn.style.pointerEvents = 'none';
+                }
             }
             
             // Mostrar botão próximo se não estiver no final
-            const maxScroll = row.scrollWidth - row.clientWidth;
             if (row.scrollLeft < maxScroll - 10) {
-                nextBtn.style.opacity = '1';
-                nextBtn.style.pointerEvents = 'all';
+                if (isMobile) {
+                    nextBtn.style.opacity = '1';
+                    nextBtn.style.pointerEvents = 'all';
+                } else {
+                    nextBtn.style.opacity = '1';
+                    nextBtn.style.pointerEvents = 'all';
+                }
             } else {
-                nextBtn.style.opacity = '0';
-                nextBtn.style.pointerEvents = 'none';
+                if (isMobile) {
+                    nextBtn.style.opacity = '0.5'; // Mais visível no mobile mesmo no final
+                    nextBtn.style.pointerEvents = 'all';
+                } else {
+                    nextBtn.style.opacity = '0';
+                    nextBtn.style.pointerEvents = 'none';
+                }
+            }
+            
+            // Gerenciar gradiente e indicador no mobile
+            if (isMobile) {
+                // Verifica se está no final do scroll
+                if (row.scrollLeft >= maxScroll - 10) {
+                    row.classList.add('scrolled-to-end');
+                    wrapper.classList.add('no-more-content');
+                } else {
+                    row.classList.remove('scrolled-to-end');
+                    wrapper.classList.remove('no-more-content');
+                }
             }
         };
         
         row.addEventListener('scroll', updateButtons);
+        window.addEventListener('resize', updateButtons);
         updateButtons(); // Verificar estado inicial
     });
 });
