@@ -246,7 +246,7 @@
 .instagram-chamada
   {
     height: 100vh;
-    margin-top: 20px;
+    margin-top: 60px; /* Aumenta o espaçamento superior no desktop */
   }
 
 .instagram-chamada-conteudoImg {
@@ -465,6 +465,21 @@
     
     .btn-whatsapp-float {
         display: none !important;
+    }
+}
+
+/* Ajuste de margens para área de ícones - MOBILE */
+@media (max-width: 768px) {
+    .areaIcones {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+    }
+    
+    .areaIcones > div {
+        gap: 24px !important; /* Reduz o gap entre os ícones no mobile */
     }
 }
 

@@ -498,6 +498,7 @@ body{
 .instagram-chamada
 {
     width: 100%;
+    margin-top: 60px; /* Aumenta o espaçamento superior no mobile */
     /* height: 100vh; */
 }  
 
