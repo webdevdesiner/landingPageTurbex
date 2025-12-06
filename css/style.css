@@ -514,12 +514,20 @@ body{
     text-align: center; /* Garante que o texto fique centralizado */
 
     color: #000000;
-    /* text-shadow: */
-        /* -0.1px -0.1px 0 #fff, */
-         /* 0.1px -0.1px 0 #fff, */
-        /* -1px  1px 0 #fff, */
-         /* 0.1px  0.1px 0 #fff; */
-         /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+}
+
+/* Estilo limpo para o h2 da seção Instagram */
+.instagram-chamada-conteudo h2 {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #000000;
+    text-shadow: none; /* Remove qualquer sombra */
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-transform: none; /* Remove transformações de texto */
 }
 
 
