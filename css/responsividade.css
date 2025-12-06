@@ -1,6 +1,38 @@
   /* Responsividade */
 
-  /* Quando for desktop (mínimo 992px), mostra a versão larga */
+  /* MOBILE FIRST - Estilos específicos para mobile (até 501px) */
+  @media (max-width: 501px) {
+    /* Estilização da imagem rotativa do produto - MOBILE */
+    #produto-rotativo {
+      max-width: 100vw;
+      max-height: 60vh;
+      width: auto;
+      height: auto;
+      /* Removido min-height e min-width para evitar redimensionamento não proporcional */
+      object-fit: contain;
+      object-position: center bottom;
+      transition: opacity 0.7s;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%) translateZ(0);
+      pointer-events: auto;
+      display: block;
+      /* Propriedades para renderização nítida - MOBILE */
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: auto; /* Renderização padrão otimizada (não pixelated) */
+      -ms-interpolation-mode: bicubic; /* IE: renderização de alta qualidade */
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      will-change: transform;
+      /* Força renderização nítida */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+
+  /* Quando for tablet/desktop (mínimo 502px), mostra a versão larga */
   @media (min-width: 502px) {
 
     /* Container do cabeçalho principal */
@@ -70,7 +102,7 @@
       background-size: cover; /* Faz a imagem cobrir todo o container */
     }
 
-    /* Estilização da imagem rotativa do produto */
+    /* Estilização da imagem rotativa do produto - TABLET/DESKTOP */
     #produto-rotativo {
       max-width: 100vw; /* Largura máxima igual à viewport */
       max-height: 100vh; /* Altura máxima igual à viewport */
@@ -83,9 +115,16 @@
       left: 50%; /* Centraliza horizontalmente */
       bottom: 0; /* Alinha à base do container */
       /* top: auto; Remove qualquer valor anterior de 'top' */
-      transform: translateX(-65%); /* Ajusta para centralizar perfeitamente */
+      transform: translateX(-65%) translateZ(0); /* Ajusta para centralizar e força aceleração de hardware */
       pointer-events: auto; /* Permite interação com o mouse */
       display: block; /* Garante que o elemento seja exibido como bloco */
+      /* Propriedade para garantir renderização nítida das imagens */
+      image-rendering: -webkit-optimize-contrast; /* Chrome/Safari: renderização nítida */
+      image-rendering: auto; /* Renderização padrão otimizada */
+      -ms-interpolation-mode: bicubic; /* IE: renderização de alta qualidade */
+      backface-visibility: hidden; /* Evita problemas de renderização 3D */
+      -webkit-backface-visibility: hidden; /* Chrome/Safari: evita problemas de renderização 3D */
+      will-change: transform; /* Otimiza performance da transformação */
     }
 
     
